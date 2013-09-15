@@ -56,6 +56,8 @@ gem 'byebug', group: [:development, :test]
 
 gem 'utils' , group: :development
 
+gem 'haml-rails'
+
 gem 'rspec-rails', group: :test
 
 gem 'capybara', group: :test

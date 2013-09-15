@@ -30,8 +30,4 @@ describe SinProject do
     sin_project.betterplace_id = nil
     expect(sin_project).to have(2).errors_on(:betterplace_id)
   end
-
-  it "can build a betterplace platform URL" do
-    expect(sin_project.betterplace_platform_url).to be_a URI::HTTP
-  end
 end

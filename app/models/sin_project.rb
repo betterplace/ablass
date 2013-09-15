@@ -6,12 +6,8 @@ class SinProject < ActiveRecord::Base
 
   validates :description, presence: true
 
-  validates :betterplace_id, presence: true,
+  validates :betterplace_id,
+    presence: true,
+    uniqueness: true,
     numericality: { only_integer: true, greater_than_or_equal_to: 1 }
-
-  def betterplace_platform_url(lang: 'en')
-    betterplace_id.full? do |id|
-      URI.parse("http://www.betterplace.org/#{lang}/projects/%u" % id)
-    end
-  end
 end

@@ -1,0 +1,12 @@
+%h1= @sin_project.name
+= form_tag betterplace_donation_url(@sin_project).to_s, method: :get do
+  = radio_button_tag(:'donation_presenter[donation_amount]',  5)
+  = label_tag(:donation_presenter_donation_amount, 'Small flame') 
+  = radio_button_tag(:'donation_presenter[donation_amount]', 15)
+  = label_tag(:donation_presenter_donation_amount, 'Medium flame') 
+  = radio_button_tag(:'donation_presenter[donation_amount]', 25)
+  = label_tag(:donation_presenter_donation_amount, 'Large flame') 
+  = hidden_field_tag :client_id, 'ablass'
+  -# hidden_field_tag :donation_client_reference, '666-23-42-unique'
+  = submit_tag 'Choose'
+

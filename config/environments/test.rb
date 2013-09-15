@@ -33,4 +33,7 @@ Ablass::Application.configure do
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
+
+  # Where the betterplace platform lives:
+  config.betterplace_platform_host = 'betterplace.test.host'
 end
