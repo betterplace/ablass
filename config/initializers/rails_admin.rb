@@ -30,7 +30,12 @@ RailsAdmin.config do |config|
   # config.excluded_models = ['Sin', 'SinProject']
 
   # Include specific models (exclude the others):
-  # config.included_models = ['Sin', 'SinProject']
+  config.included_models = ['Sin', 'Sin::Translation', 'SinProject']
+  config.model 'Sin::Translation' do
+    visible false
+    configure :locale, :hidden
+    include_fields :locale, :name, :explanation
+  end
 
   # Label methods for model instances:
   # config.label_methods << :description # Default is [:name, :title]
