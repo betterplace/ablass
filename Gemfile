@@ -59,3 +59,7 @@ gem 'webmock', group: :test
 gem 'factory_girl', group: :test
 
 gem 'fuubar', group: :test
+
+gem 'rails_admin'
+
+gem "devise"
