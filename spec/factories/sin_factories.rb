@@ -3,4 +3,3 @@ FactoryGirl.define do
     name { |i| "Sin ##{i}" }
   end
 end
-

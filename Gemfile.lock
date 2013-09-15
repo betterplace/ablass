@@ -229,6 +229,7 @@ DEPENDENCIES
   sdoc
   simplecov
   sqlite3
+  tins
   turbolinks
   uglifier (>= 1.3.0)
   utils

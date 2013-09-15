@@ -63,3 +63,5 @@ gem 'fuubar', group: :test
 gem 'rails_admin'
 
 gem "devise"
+
+gem 'tins', require: 'tins/xt'
