@@ -1,3 +1,5 @@
+# vim: set ft=ruby:
+
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -42,4 +44,6 @@ end
 # gem 'capistrano', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
+gem 'byebug', group: [:development, :test]
+
+gem 'utils' , group: :development
