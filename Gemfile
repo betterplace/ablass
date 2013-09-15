@@ -48,4 +48,14 @@ gem 'byebug', group: [:development, :test]
 
 gem 'utils' , group: :development
 
-gem 'rspec-rails'
+gem 'rspec-rails', group: :test
+
+gem 'capybara', group: :test
+
+gem 'simplecov', group: :test
+
+gem 'webmock', group: :test
+
+gem 'factory_girl', group: :test
+
+gem 'fuubar', group: :test
