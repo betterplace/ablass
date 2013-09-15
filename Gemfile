@@ -47,3 +47,5 @@ end
 gem 'byebug', group: [:development, :test]
 
 gem 'utils' , group: :development
+
+gem 'rspec-rails'
