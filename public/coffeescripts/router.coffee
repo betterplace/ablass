@@ -7,3 +7,4 @@ define ["jquery", "underscore", "backbone", "marionette"], ($, _ , Backbone, Mar
       'home': 'homeRoute'
       'sins': 'sinsRoute'
       'sin/:id/projects': 'projectsRoute'
+      'redeemed': 'donationSuccessRoute'

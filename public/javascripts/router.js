@@ -16,7 +16,8 @@
         '': 'homeRoute',
         'home': 'homeRoute',
         'sins': 'sinsRoute',
-        'sin/:id/projects': 'projectsRoute'
+        'sin/:id/projects': 'projectsRoute',
+        'redeemed': 'donationSuccessRoute'
       };
 
       return AblassRouter;

@@ -45,6 +45,15 @@
         return console.log("projects " + id);
       };
 
+      ApplicationController.prototype.donationSuccessRoute = function() {
+        console.log("here");
+        return require(["views/success-view"], function(SuccessView) {
+          var mySuccessView;
+          mySuccessView = new SuccessView();
+          return Layout.content.show(mySuccessView);
+        });
+      };
+
       ApplicationController.prototype.changePage = function() {
         return console.log("changing page");
       };

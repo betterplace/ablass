@@ -25,5 +25,11 @@ define [ "marionette", "config/event_handler", "views/layouts/ablass"], ( Marion
     projectsRoute: (id)->
       console.log "projects #{id}"
 
+    donationSuccessRoute: ()->
+      console.log "here"
+      require ["views/success-view"], (SuccessView)->
+        mySuccessView = new SuccessView()
+        Layout.content.show( mySuccessView )
+
     changePage: ()->
       console.log "changing page"
