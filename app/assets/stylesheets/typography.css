@@ -1,0 +1,42 @@
+.red_buttons {
+	/* background gradient */
+	background: #f16522;
+	background: -moz-linear-gradient(top,  #f16522 0%, #a41b21 6%, #e51d22 50%, #b51d22 90%, #110618 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f16522), color-stop(6%,#a41b21), color-stop(50%,#e51d22), color-stop(90%,#b51d22), color-stop(100%,#110618));
+	background: -webkit-linear-gradient(top,  #f16522 0%,#a41b21 6%,#e51d22 50%,#b51d22 90%,#110618 100%);
+	background: -o-linear-gradient(top,  #f16522 0%,#a41b21 6%,#e51d22 50%,#b51d22 90%,#110618 100%);
+	background: -ms-linear-gradient(top,  #f16522 0%,#a41b21 6%,#e51d22 50%,#b51d22 90%,#110618 100%);
+	background: linear-gradient(to bottom,  #f16522 0%,#a41b21 6%,#e51d22 50%,#b51d22 90%,#110618 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f16522', endColorstr='#110618',GradientType=0 );
+	
+	box-radius: 10px;
+	color: #ffd300;
+	font-size: 36px;
+}
+
+
+/* Typography */
+
+@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700);
+
+body { font-family: 'Libre Baskerville', serif; }
+
+h1 { color: #b51d22; font-size: 48px; }
+
+h2 { color: black; font-size: 36px; font-weight: bold; }
+
+p { color: #6d6d6d; font-size: 24px; }
+
+
+/* body background gradient */
+
+.bck-gradient {
+	background: #f7f0e6;
+	background: -moz-linear-gradient(top,  #f7f0e6 0%, #ffffff 50%, #f7f0e6 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f0e6), color-stop(50%,#ffffff), color-stop(100%,#f7f0e6));
+	background: -webkit-linear-gradient(top,  #f7f0e6 0%,#ffffff 50%,#f7f0e6 100%);
+	background: -o-linear-gradient(top,  #f7f0e6 0%,#ffffff 50%,#f7f0e6 100%);
+	background: -ms-linear-gradient(top,  #f7f0e6 0%,#ffffff 50%,#f7f0e6 100%);
+	background: linear-gradient(to bottom,  #f7f0e6 0%,#ffffff 50%,#f7f0e6 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f0e6', endColorstr='#f7f0e6',GradientType=0 );
+}
