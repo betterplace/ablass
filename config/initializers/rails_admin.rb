@@ -30,7 +30,7 @@ RailsAdmin.config do |config|
   # config.excluded_models = ['Sin', 'SinProject']
 
   # Include specific models (exclude the others):
-  config.included_models = ['Sin', 'Sin::Translation', 'SinProject']
+  config.included_models = ['Sin', 'Sin::Translation', 'SinProject', 'Flame']
   config.model 'Sin::Translation' do
     visible false
     configure :locale, :hidden
