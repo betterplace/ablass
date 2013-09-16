@@ -1,3 +1,5 @@
+# vim: set ft=ruby:
+
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -49,4 +51,27 @@ end
 # gem 'capistrano', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
+gem 'byebug', group: [:development, :test]
+
+gem 'utils' , group: :development
+
+gem 'rspec-rails', group: :test
+
+gem 'capybara', group: :test
+
+gem 'simplecov', group: :test
+
+gem 'webmock', group: :test
+
+gem 'factory_girl', group: :test
+
+gem 'fuubar', group: :test
+
+gem 'rails_admin'
+
+gem "devise"
+
+gem 'tins', require: 'tins/xt'
+
+gem 'globalize3', github: 'svenfuchs/globalize3', branch: 'rails4'
+gem 'rails_admin_globalize_field'

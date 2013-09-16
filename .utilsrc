@@ -1,0 +1,5 @@
+# vim: set ft=ruby:
+
+probe do
+  test_framework :rspec
+end
