@@ -31,7 +31,6 @@
 
       AmountView.prototype.navigateToBetterplace = function() {
         var amount;
-        console.log("here ");
         amount = this.$("input").val();
         return window.location.href = "https://www.bp42.com/en/projects/" + this.project_id + "/client_donations/new?client_id=ablass&amount=" + amount;
       };

@@ -44,7 +44,6 @@ define [ "marionette", "config/event_handler", "views/layouts/ablass"], ( Marion
           router.navigate("/projects/#{id}/amount", {trigger: true })
 
     amountRoute: (id)->
-      console.log "amount ruote"
       require ["views/amount-view"], (AmountView)->
         myAmountView = new AmountView()
         myAmountView.setProjectId( id )
@@ -52,10 +51,6 @@ define [ "marionette", "config/event_handler", "views/layouts/ablass"], ( Marion
 
 
     donationSuccessRoute: ()->
-      console.log "here"
       require ["views/success-view"], (SuccessView)->
         mySuccessView = new SuccessView()
         Layout.content.show( mySuccessView )
-
-    changePage: ()->
-      console.log "changing page"

@@ -16,7 +16,6 @@ define ["jquery", "underscore", "backbone", "text!templates/amount.html", "app"]
       @project_id = project_id
 
     navigateToBetterplace: ()->
-      console.log "here "
       amount = @$("input").val()
       window.location.href =  "https://www.bp42.com/en/projects/#{@project_id}/client_donations/new?client_id=ablass&amount=#{amount}"
 

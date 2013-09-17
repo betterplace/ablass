@@ -75,7 +75,6 @@
       };
 
       ApplicationController.prototype.amountRoute = function(id) {
-        console.log("amount ruote");
         return require(["views/amount-view"], function(AmountView) {
           var myAmountView;
           myAmountView = new AmountView();
@@ -85,16 +84,11 @@
       };
 
       ApplicationController.prototype.donationSuccessRoute = function() {
-        console.log("here");
         return require(["views/success-view"], function(SuccessView) {
           var mySuccessView;
           mySuccessView = new SuccessView();
           return Layout.content.show(mySuccessView);
         });
-      };
-
-      ApplicationController.prototype.changePage = function() {
-        return console.log("changing page");
       };
 
       return ApplicationController;

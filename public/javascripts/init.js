@@ -8,7 +8,7 @@
       controller: new ApplicationController(App)
     });
     App.start();
-    console.log("app started");
+    if (console) console.log("app started");
     return {};
   });
 

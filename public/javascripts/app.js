@@ -4,7 +4,7 @@
     var SingleApp;
     SingleApp = _.once(function() {
       var Ablass;
-      console.log("init_app");
+      if (console) console.log("init_app");
       Ablass = new Backbone.Marionette.Application();
       Ablass.vent = EventHandler;
       Ablass.on("initialize:after", function(options) {

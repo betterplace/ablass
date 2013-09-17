@@ -6,5 +6,5 @@ define ["app", "router", "application_controller"], (App, Router, ApplicationCon
 
   App.router = new Router( {controller: new ApplicationController( App ) } )
   App.start()
-  console.log "app started"
+  console.log "app started" if console
   {}
