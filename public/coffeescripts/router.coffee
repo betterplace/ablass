@@ -8,4 +8,5 @@ define ["jquery", "underscore", "backbone", "marionette"], ($, _ , Backbone, Mar
       'sins': 'sinsRoute'
       'sin/:id/projects': 'sinsProjectsRoute'
       'projects/:id': 'projectRoute'
+      'projects/:id/amount': 'amountRoute'
       'redeemed': 'donationSuccessRoute'

@@ -11,6 +11,7 @@ define [ "marionette", "config/event_handler", "views/layouts/ablass"], ( Marion
       require ["views/home-view"], (HomeView)->
         myHomeView = new HomeView()
         Layout.content.show( myHomeView )
+
     sinsRoute: ()->
       router = @app.router
       require ["views/sins/page-view", "fixtures/sins"], (SinsPageView, sins)->
@@ -34,12 +35,21 @@ define [ "marionette", "config/event_handler", "views/layouts/ablass"], ( Marion
           router.navigate("/projects/#{@id}", {trigger: true })
 
     projectRoute: (id)->
+      router = @app.router
       require ["views/projects/show-view", "models/project", "fixtures/projects"], (ProjectView, Project, projects)->
         project = new Project( projects[0] )
         myProjectView = new ProjectView( model: project )
         Layout.content.show( myProjectView )
         $("button.donate").click ()->
-          window.location.href =  "https://www.bp42.com/en/projects/632/client_donations/new?client_id=ablass"
+          router.navigate("/projects/#{id}/amount", {trigger: true })
+
+    amountRoute: (id)->
+      console.log "amount ruote"
+      require ["views/amount-view"], (AmountView)->
+        myAmountView = new AmountView()
+        myAmountView.setProjectId( id )
+        Layout.content.show( myAmountView )
+
 
     donationSuccessRoute: ()->
       console.log "here"

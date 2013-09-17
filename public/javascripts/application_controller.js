@@ -57,6 +57,8 @@
       };
 
       ApplicationController.prototype.projectRoute = function(id) {
+        var router;
+        router = this.app.router;
         return require(["views/projects/show-view", "models/project", "fixtures/projects"], function(ProjectView, Project, projects) {
           var myProjectView, project;
           project = new Project(projects[0]);
@@ -65,8 +67,20 @@
           });
           Layout.content.show(myProjectView);
           return $("button.donate").click(function() {
-            return window.location.href = "https://www.bp42.com/en/projects/632/client_donations/new?client_id=ablass";
+            return router.navigate("/projects/" + id + "/amount", {
+              trigger: true
+            });
           });
+        });
+      };
+
+      ApplicationController.prototype.amountRoute = function(id) {
+        console.log("amount ruote");
+        return require(["views/amount-view"], function(AmountView) {
+          var myAmountView;
+          myAmountView = new AmountView();
+          myAmountView.setProjectId(id);
+          return Layout.content.show(myAmountView);
         });
       };
 
