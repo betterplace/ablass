@@ -1,5 +1,6 @@
 class SinProjectsController < ApplicationController
-  respond_to :html, :json
+  respond_to :html
+  respond_to :json, only: :index
 
   helper_method :current_sin
 
@@ -10,12 +11,12 @@ class SinProjectsController < ApplicationController
 
   def show
     @sin_project = current_sin.projects.find(params[:id])
-    respond_to(&:html)
+    respond_with(@sin_project)
   end
 
   def temperature
     @sin_project = current_sin.projects.find(params[:id])
-    respond_to(&:html)
+    respond_with(@sin_project)
   end
 
   private
