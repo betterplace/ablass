@@ -56,7 +56,7 @@ Ablass::Application.routes.draw do
 
   get 'home' => 'home#index'
 
-  get 'start' => 'start#index'
+  # get 'start' => 'start#index'
 
   # Our resources
   resources :sins, only: %i[index] do
