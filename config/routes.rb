@@ -3,7 +3,7 @@ Ablass::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'start#index'
+  #root 'start#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -53,6 +53,8 @@ Ablass::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  get 'home' => 'home#index'
 
   # Our resources
   resources :sins, only: %i[index] do
