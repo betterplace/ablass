@@ -32,6 +32,18 @@ ActiveRecord::Schema.define(version: 20130916154133) do
 
   add_index "rails_admin_histories", ["item", "table", "month", "year"], name: "index_rails_admin_histories"
 
+  create_table "sin_project_translations", force: true do |t|
+    t.integer  "sin_project_id", null: false
+    t.string   "locale",         null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+    t.text     "description"
+  end
+
+  add_index "sin_project_translations", ["locale"], name: "index_sin_project_translations_on_locale"
+  add_index "sin_project_translations", ["sin_project_id"], name: "index_sin_project_translations_on_sin_project_id"
+
   create_table "sin_projects", force: true do |t|
     t.integer  "sin_id",         null: false
     t.string   "name",           null: false

@@ -3,8 +3,10 @@ class SinProject < ActiveRecord::Base
   validates :sin, presence: true
 
   validates :name, presence: true
+  translates :name
 
   validates :description, presence: true
+  translates :description
 
   validates :betterplace_id,
     presence: true,
