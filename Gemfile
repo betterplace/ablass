@@ -79,3 +79,5 @@ gem 'globalize3', github: 'svenfuchs/globalize3', branch: 'rails4'
 gem 'rails_admin_globalize_field'
 
 gem 'http_accept_language'
+
+gem 'rabl'

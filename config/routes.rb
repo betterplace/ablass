@@ -1,4 +1,5 @@
 Ablass::Application.routes.draw do
+  get "flames/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -56,7 +57,7 @@ Ablass::Application.routes.draw do
 
   get 'home' => 'home#index'
 
-  # get 'start' => 'start#index'
+  get 'start' => 'start#index'
 
   # Our resources
   resources :sins, only: %i[index] do
@@ -66,6 +67,7 @@ Ablass::Application.routes.draw do
       end
     end
   end
+  resources :flames, only: %i[index]
 
   # Admin backend
   devise_for :users

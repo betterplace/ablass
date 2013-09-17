@@ -129,6 +129,8 @@ GEM
     polyglot (0.3.3)
     pry-editline (1.1.2)
     pstree (0.0.0)
+    rabl (0.8.6)
+      activesupport (>= 2.3.14)
     rack (1.5.2)
     rack-pjax (0.7.0)
       nokogiri (~> 1.5)
@@ -260,6 +262,7 @@ DEPENDENCIES
   http_accept_language
   jbuilder (~> 1.2)
   jquery-rails
+  rabl
   rails (= 4.0.0)
   rails_admin
   rails_admin_globalize_field
