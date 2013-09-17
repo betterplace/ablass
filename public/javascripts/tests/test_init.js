@@ -13,7 +13,7 @@
       return trivialReporter.specFilter(spec);
     };
     currentWindowOnload = window.onload;
-    specs = ['models/sin'];
+    specs = ['models/sin', 'models/project'];
     return require(specs, function(specs) {
       return jasmineEnv.execute();
     });

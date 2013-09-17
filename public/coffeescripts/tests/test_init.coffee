@@ -13,7 +13,8 @@ require ['underscore', 'jquery', "jasmine", "jasmine_html"], (_, $, jasmine, jas
   currentWindowOnload = window.onload
 
   specs = [
-    'models/sin'
+    'models/sin',
+    'models/project'
   ]
 
   require specs, (specs)->

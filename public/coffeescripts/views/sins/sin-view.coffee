@@ -9,8 +9,4 @@ define ["jquery", "underscore", "backbone", "marionette", "text!/javascripts/tem
 
     render: ()->
       @$el.html( _.template( SinTemplate, @model.attributes ) )
-      view = @
       @$el
-
-    sin_projects: ()->
-      console.log "visiting sin projects"

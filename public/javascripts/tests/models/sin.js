@@ -19,7 +19,7 @@
         sin_view.render();
         expect(sin_view.$el).toBeTruthy();
         expect(sin_view.$el.find("div.title").html()).toBe("title");
-        expect(sin_view.$el.find("div.icon").html()).toBe("icon");
+        expect(sin_view.$el.find("div.icon").html()).toMatch(/<img/);
         return expect(sin_view.$el.find("div.description").html()).toBe("text");
       });
     });

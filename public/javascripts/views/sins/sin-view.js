@@ -21,14 +21,8 @@
       };
 
       SinItemView.prototype.render = function() {
-        var view;
         this.$el.html(_.template(SinTemplate, this.model.attributes));
-        view = this;
         return this.$el;
-      };
-
-      SinItemView.prototype.sin_projects = function() {
-        return console.log("visiting sin projects");
       };
 
       return SinItemView;

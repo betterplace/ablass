@@ -41,8 +41,33 @@
         });
       };
 
-      ApplicationController.prototype.projectsRoute = function(id) {
-        return console.log("projects " + id);
+      ApplicationController.prototype.sinsProjectsRoute = function(id) {
+        var router;
+        router = this.app.router;
+        return require(["views/projects/page-view", "fixtures/projects"], function(ProjectsPageView, projects) {
+          var myProjectsPageView;
+          myProjectsPageView = new ProjectsPageView(projects);
+          Layout.content.show(myProjectsPageView);
+          return $("ul li.project_item").click(function() {
+            return router.navigate("/projects/" + this.id, {
+              trigger: true
+            });
+          });
+        });
+      };
+
+      ApplicationController.prototype.projectRoute = function(id) {
+        return require(["views/projects/show-view", "models/project", "fixtures/projects"], function(ProjectView, Project, projects) {
+          var myProjectView, project;
+          project = new Project(projects[0]);
+          myProjectView = new ProjectView({
+            model: project
+          });
+          Layout.content.show(myProjectView);
+          return $("button.donate").click(function() {
+            return window.location.href = "https://www.bp42.com/en/projects/632/client_donations/new?client_id=ablass";
+          });
+        });
       };
 
       ApplicationController.prototype.donationSuccessRoute = function() {

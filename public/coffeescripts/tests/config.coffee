@@ -18,9 +18,11 @@ require.config
 
     #models
     sin: '../models/sin'
+    project: '../models/project'
 
     #views
     sin_view: '../views/sins/sin-view'
+    project_view: '../views/projects/item-view'
 
   shim:
     # Backbone library depends on lodash and jQuery.

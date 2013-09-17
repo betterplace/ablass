@@ -2,27 +2,39 @@ define ()->
   [
     {
       id: 3334
-      title: "project 1"
+      name: "project 1"
       description: "xyz"
-      image: "http://goodmorningkitten.com/media/kittypix/2/kitten2086.jpg"
+      donated: 33
+      needed: 300
+      icon: "http://asset1.betterplace.org/paperclip/000/301/656/default_01_a_light_s.jpg"
+      image: "http://asset1.betterplace.org/paperclip/000/137/810/default_solarlampe.jpg"
     },
     {
       id: 23565
-      title: "project 2"
+      name: "project 2"
       description: "safdasg"
-      image: "http://goodmorningkitten.com/media/kittypix/2/kitten2086.jpg"
+      donated: 50
+      needed: 3000
+      icon: "http://asset1.betterplace.org/paperclip/000/301/656/default_01_a_light_s.jpg"
+      image: "http://asset1.betterplace.org/paperclip/000/137/810/default_solarlampe.jpg"
     },
     {
       id: 4456
-      title: "project 3"
+      name: "project 3"
       description: "sdfgsdfg"
-      image: "http://goodmorningkitten.com/media/kittypix/2/kitten2086.jpg"
+      donated: 89
+      needed: 230
+      icon: "http://asset1.betterplace.org/paperclip/000/301/656/default_01_a_light_s.jpg"
+      image: "http://asset1.betterplace.org/paperclip/000/137/810/default_solarlampe.jpg"
     },
     {
       id: 23567
-      title: "project 4"
+      name: "project 4"
       description: "sdgfsdfgsdf"
-      image: "http://goodmorningkitten.com/media/kittypix/2/kitten2086.jpg"
+      donated: 45
+      needed: 90
+      icon: "http://asset1.betterplace.org/paperclip/000/301/656/default_01_a_light_s.jpg"
+      image: "http://asset1.betterplace.org/paperclip/000/137/810/default_solarlampe.jpg"
     }
 
   ]

@@ -14,7 +14,9 @@
       jasmine_html: '../libs/jasmine/jasmine-html',
       text: '../libs/requirejs.text',
       sin: '../models/sin',
-      sin_view: '../views/sins/sin-view'
+      project: '../models/project',
+      sin_view: '../views/sins/sin-view',
+      project_view: '../views/projects/item-view'
     },
     shim: {
       backbone: {
