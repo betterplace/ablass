@@ -9,4 +9,13 @@ describe Sin do
     sin.name = ''
     expect(sin).not_to be_valid
   end
+
+  it "has name as a parameter" do
+    expect(sin.to_param).to eq sin.name
+  end
+
+  it "can be found via its parameter" do
+    expect(sin.save).to be_true
+    expect(Sin.find_by_param(sin.to_param)).to eq sin
+  end
 end

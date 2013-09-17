@@ -41,6 +41,8 @@ ActiveRecord::Schema.define(version: 20130916154133) do
     t.datetime "updated_at"
   end
 
+  add_index "sin_projects", ["betterplace_id"], name: "index_sin_projects_on_betterplace_id", unique: true
+
   create_table "sin_translations", force: true do |t|
     t.integer  "sin_id",      null: false
     t.string   "locale",      null: false

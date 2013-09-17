@@ -1,0 +1,8 @@
+%h1= t('.title')
+%ul
+- for sin in @sins
+  %li
+    %h2= sin.name
+    %p= sin.explanation
+    = link_to 'Choose', sin_projects_url(sin)
+

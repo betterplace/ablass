@@ -1,11 +1,9 @@
 Ablass::Application.routes.draw do
-  devise_for :users
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  #root 'start#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -56,5 +54,20 @@ Ablass::Application.routes.draw do
   #     resources :products
   #   end
 
-  root to: "home#index"
+  get 'home' => 'home#index'
+
+  get 'start' => 'start#index'
+
+  # Our resources
+  resources :sins, only: %i[index] do
+    resources :projects, only: %i[index show], controller: :sin_projects do
+      member do
+        get 'temperature'
+      end
+    end
+  end
+
+  # Admin backend
+  devise_for :users
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 end

@@ -8,5 +8,6 @@ class CreateSinProjects < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_index :sin_projects, [ :betterplace_id ], unique: true
   end
 end

@@ -77,4 +77,7 @@ Ablass::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  # Where the betterplace platform lives:
+  config.betterplace_platform_host = 'www.betterplace.org'
 end
