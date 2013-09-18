@@ -1,6 +1,6 @@
 class SinProjectsController < ApplicationController
   respond_to :html
-  respond_to :json, only: :index
+  respond_to :json, only: %i[ index show ]
 
   helper_method :current_sin
 

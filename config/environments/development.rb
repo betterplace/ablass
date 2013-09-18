@@ -29,4 +29,9 @@ Ablass::Application.configure do
 
   # Where the betterplace platform lives:
   config.betterplace_platform_host = 'www.bp42.com'
+
+  # betterplace API root
+  config.betterplace_api = -> path, locale: I18n.locale {
+    "http://api.bp42.com/%s/api_v4/%s" % [ locale, path.sub(/\A\/*/, '') ]
+  }
 end
