@@ -27,8 +27,8 @@ gem 'jquery-rails'
 gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
-gem 'haml'
+#gem 'jbuilder', '~> 1.2'
+gem 'rabl'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -79,5 +79,3 @@ gem 'globalize3', github: 'svenfuchs/globalize3', branch: 'rails4'
 gem 'rails_admin_globalize_field'
 
 gem 'http_accept_language'
-
-gem 'rabl'
