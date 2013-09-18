@@ -1,16 +1,25 @@
-define ["jquery", "underscore", "backbone", "text!templates/sins/page.html", "models/sin", "views/sins/sin-view"], ($, _ , Backbone, SinsPageTemplate, Sin, SinItemView)->
-  
-  class SinsPageView extends Backbone.View
+define ["jquery",
+        "underscore",
+        "backbone",
+        "marionette",
+        "text!templates/sins/page.html",
+        "collections/sins",
+        "views/sins/sin-view"], ($, _ , Backbone, Marionette, SinsPageTemplate, SinsCollection, SinItemView )->
 
-    initialize: (sins)->
-      @sins = sins
-    
+  class SinsPageView extends Backbone.Marionette.ItemView
+
+    initialize: ()->
+      view = @
+      @collection = new SinsCollection()
+      @collection.fetch( {reset: true} )
+
     render: ()->
       template = $(_.template( SinsPageTemplate )())
 
-      _.each @sins, (sin)->
-        sin_object = new Sin( sin )
-        sin_view = new SinItemView( { model: sin_object } )
+      _.each @collection.models, (sin)->
+        sin_view = new SinItemView( { model: sin } )
         template.find("ul#sins").append( sin_view.render() )
 
       @$el.html( template.html() )
+      @trigger("rendered")
+      @$el

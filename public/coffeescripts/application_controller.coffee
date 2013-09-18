@@ -1,7 +1,7 @@
 define [ "marionette", "config/event_handler", "views/layouts/ablass"], ( Marionette, EventHandler, Layout, HomeView)->
-  
+
   class ApplicationController extends Marionette.Controller
-    
+
     initialize: ( app )->
       @app = app
       Layout.render()
@@ -14,14 +14,17 @@ define [ "marionette", "config/event_handler", "views/layouts/ablass"], ( Marion
 
     sinsRoute: ()->
       router = @app.router
-      require ["views/sins/page-view", "fixtures/sins"], (SinsPageView, sins)->
-        mySinsPageView = new SinsPageView( sins )
-        Layout.content.show( mySinsPageView )
+      require ["views/sins/page-view"], (SinsPageView)->
+        mySinsPageView = new SinsPageView()
+        mySinsPageView.on "rendered", ()->
+          # This should be inside the SinItemView but it's not responding because the object is not yet in the DOM
+          # There is a need to refactor this if the list become more complex
+          @$("ul li.sin_item").click ()->
+            router.navigate("sin/#{@id}/projects", {trigger: true })
 
-        # This should be inside the SinItemView but it's not responding because the object is not yet in the DOM
-        # There is a need to refactor this if the list become more complex
-        $("ul li.sin_item").click ()->
-          router.navigate("sin/#{@id}/projects", {trigger: true })
+        # Listening the event collection fetch to render the page
+        mySinsPageView.collection.on "reset", ()->
+          Layout.content.show( mySinsPageView )
 
     sinsProjectsRoute: (id)->
       router = @app.router

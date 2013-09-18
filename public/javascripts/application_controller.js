@@ -29,14 +29,18 @@
       ApplicationController.prototype.sinsRoute = function() {
         var router;
         router = this.app.router;
-        return require(["views/sins/page-view", "fixtures/sins"], function(SinsPageView, sins) {
+        return require(["views/sins/page-view"], function(SinsPageView) {
           var mySinsPageView;
-          mySinsPageView = new SinsPageView(sins);
-          Layout.content.show(mySinsPageView);
-          return $("ul li.sin_item").click(function() {
-            return router.navigate("sin/" + this.id + "/projects", {
-              trigger: true
+          mySinsPageView = new SinsPageView();
+          mySinsPageView.on("rendered", function() {
+            return this.$("ul li.sin_item").click(function() {
+              return router.navigate("sin/" + this.id + "/projects", {
+                trigger: true
+              });
             });
+          });
+          return mySinsPageView.collection.on("reset", function() {
+            return Layout.content.show(mySinsPageView);
           });
         });
       };

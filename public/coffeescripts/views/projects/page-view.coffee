@@ -1,4 +1,12 @@
-define ["jquery", "underscore", "backbone", "text!templates/projects/page.html", "models/project", "views/projects/item-view"], ($, _ , Backbone, ProjectsPageTemplate, Project, ProjectItemView)->
+define ["jquery", 
+        "underscore", 
+        "backbone", 
+        "text!templates/projects/page.html", 
+        "models/project", 
+        "collections/projects",
+        "views/projects/item-view", 
+        ], 
+        ($, _ , Backbone, ProjectsPageTemplate, Project, ProjectsCollection, ProjectItemView )->
   
   class ProjectPageView extends Backbone.View
 

@@ -5,7 +5,7 @@ define ["jquery", "underscore", "backbone", "marionette", "text!/javascripts/tem
     className: 'sin_item'
 
     id: ()->
-      @model.attributes.id
+      @model.attributes.name
 
     render: ()->
       @$el.html( _.template( SinTemplate, @model.attributes ) )

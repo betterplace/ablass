@@ -17,7 +17,7 @@
       SinItemView.prototype.className = 'sin_item';
 
       SinItemView.prototype.id = function() {
-        return this.model.attributes.id;
+        return this.model.attributes.name;
       };
 
       SinItemView.prototype.render = function() {
