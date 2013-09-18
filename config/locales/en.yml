@@ -1,7 +1,7 @@
 en:
   sins:
     index:
-      title: Type of your sin
+      title: What manner of sin have you commited?
   sin_projects:
     index:
-      title: Category %{sin_name}
+      title: You are guilty of %{sin_name}. To which project shall you donate to redeem yourself?

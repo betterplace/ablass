@@ -1,0 +1,59 @@
+.project-meter
+  overflow: hidden
+  .percentage,
+  .money
+    position: relative
+    width: 7em
+    float: left
+    margin-left: 2.8em
+    &.percentage
+      text-align: right
+      margin-left: 1.5em
+    &.money
+      .banner
+        //@include background-gradient(#c04a10, matte, top, .7)
+        background-color: #c04a10
+        &:before
+          border-right-color: #b1440f
+        &:after
+          border-top-color: #b1440f
+  .value
+    position: relative
+    z-index: 10
+    padding: 0 0 0.225em 0
+    text-align: center
+    color: #636b70
+    background-color: #ededed
+    //@include background-gradient(#ededed, matte, bottom, .7)
+    border: 1px solid #ededed
+    font-weight: bold
+    font-size: 150%
+    .banner
+      position: relative
+      z-index: 20
+      top: 0.4em
+      text-align: center
+      background-color: #636b70
+      //@include background-gradient(#636b70, matte, top, .7)
+      color: white
+      font-size: 60%
+      font-weight: bold
+      margin: 0 -0.85em 0.7em -0.85em
+      background-repeat: no-repeat
+      box-shadow: 0px 5px 3px -3px #aaa
+      &:before,
+      &:after
+        content: ""
+        position: absolute
+        top: 16px
+        width: 0px
+        height: 0px
+        border-style: solid
+      &:before
+        left: 0px
+        border-width: 0 10px 10px 0
+        border-color: transparent #474d50 transparent transparent
+      &:after
+        right: 0px
+        border-width: 10px 10px 0 0
+        border-color: #474d50 transparent transparent transparent

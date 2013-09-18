@@ -1,12 +1,12 @@
-%h1= @sin_project.name
-= form_tag betterplace_donation_url(@sin_project).to_s, method: :get do
-  = radio_button_tag(:'donation_presenter[donation_amount]',  5)
-  = label_tag(:donation_presenter_donation_amount, 'Small flame') 
-  = radio_button_tag(:'donation_presenter[donation_amount]', 15)
-  = label_tag(:donation_presenter_donation_amount, 'Medium flame') 
-  = radio_button_tag(:'donation_presenter[donation_amount]', 25)
-  = label_tag(:donation_presenter_donation_amount, 'Large flame') 
-  = hidden_field_tag :client_id, 'ablass'
-  -# hidden_field_tag :donation_client_reference, '666-23-42-unique'
-  = submit_tag 'Choose'
+.temperature_page
+  %h1 
+    How Gravely have you sinned?
+  = form_tag betterplace_donation_url(@sin_project).to_s, method: :get do
+    - (1..5).each do |size|
+      = radio_button_tag(:'donation_presenter[donation_amount]',  size)
+      = label_tag("donation_presenter_donation_amount_#{size}", '', class: "flame_#{size}")
+    = hidden_field_tag :client_id, 'ablass'
+    -# hidden_field_tag :donation_client_reference, '666-23-42-unique'
+    .buttons
+      = submit_tag 'Choose', class: ["btn", "btn-danger"]
 

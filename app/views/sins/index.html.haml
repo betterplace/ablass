@@ -1,8 +1,8 @@
 %h1= t('.title')
-%ul
-- for sin in @sins
-  %li
-    %h2= sin.name
-    %p= sin.explanation
-    = link_to 'Choose', sin_projects_url(sin)
-
+%ul.list-unstyled.link-list
+  - for sin in @sins
+    %li{style: "background-image: url(/images/icons/sins/sin_icon-#{sin.name}.png)"}
+      %a{href: sin_projects_url(sin)}
+        .text
+          %h2= sin.name
+          %p= sin.explanation

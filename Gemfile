@@ -56,6 +56,7 @@ gem 'byebug', group: [:development, :test]
 gem 'utils' , group: :development
 
 gem 'haml-rails'
+gem 'sass-rails', '~> 4.0.0'
 
 gem 'rspec-rails', group: :test
 

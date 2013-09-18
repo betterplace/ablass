@@ -1,0 +1,21 @@
+.temperature_page
+  input[type="radio"]
+    display: none
+
+
+  input[type="radio"] + label
+    background: url('/images/sprites/flame-off.png') no-repeat
+    background-size: 50px 80px 
+    height: 80px
+    width: 50px
+    display:inline-block
+    padding: 0 0 0 0px
+
+
+  input[type="radio"]:checked + label
+    background: url('/images/sprites/flame-on.png') no-repeat
+    background-size: 50px 80px 
+    height: 80px
+    width: 50px
+    display:inline-block
+    padding: 0 0 0 0px

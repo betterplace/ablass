@@ -11,6 +11,12 @@
  *= require_self
  *= require_tree ./rails_admin
  *= require sin_projects
- *= require sins
  *= require start
+ *= require generics/project_meter
+ *= require generics/link_list
+ *= require generics/header
+ *= require rails_application/main
+ *= require rails_application/sins_index
+ *= require rails_application/project_show
+ *= require rails_application/temperature
  */
