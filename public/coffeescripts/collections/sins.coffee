@@ -1,5 +1,5 @@
 define ["jquery", "underscore", "backbone", "models/sin"],  ( $, _ , Backbone, Sin)->
 
-  class SinsCollection extends Backbone.Collection
+  class Collection extends Backbone.Collection
     model: Sin
     url: '/sins'

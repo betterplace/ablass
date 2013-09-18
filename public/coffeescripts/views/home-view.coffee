@@ -4,6 +4,7 @@ define ["jquery", "underscore", "backbone", "text!templates/home.html", "app"], 
     initialize: ()->
       @delegateEvents
         "click button.sins": "navigateSins"
+
     render: ()->
       @$el.html( _.template( HomeTemplate ) )
 

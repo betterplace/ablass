@@ -17,7 +17,7 @@
         'home': 'homeRoute',
         'sins': 'sinsRoute',
         'sin/:id/projects': 'sinsProjectsRoute',
-        'projects/:id': 'projectRoute',
+        'sin/:sin_id/projects/:project_id': 'projectRoute',
         'projects/:id/amount': 'amountRoute',
         'redeemed': 'donationSuccessRoute'
       };

@@ -12,6 +12,10 @@
         Project.__super__.constructor.apply(this, arguments);
       }
 
+      Project.prototype.url = function() {
+        return "/sins/" + this.attributes.sin + "/projects/" + this.attributes.id;
+      };
+
       return Project;
 
     })(Backbone.Model);

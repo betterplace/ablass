@@ -26,13 +26,14 @@
         template = $(_.template(SinsPageTemplate)());
         _.each(this.collection.models, function(sin) {
           var sin_view;
-          sin_view = new SinItemView({
-            model: sin
-          });
-          return template.find("ul#sins").append(sin_view.render());
+          if (parseInt(sin.attributes.projects) > 0) {
+            sin_view = new SinItemView({
+              model: sin
+            });
+            return template.find("ul#sins").append(sin_view.render());
+          }
         });
         this.$el.html(template.html());
-        this.trigger("rendered");
         return this.$el;
       };
 

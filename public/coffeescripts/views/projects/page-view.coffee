@@ -1,24 +1,25 @@
-define ["jquery", 
-        "underscore", 
-        "backbone", 
-        "text!templates/projects/page.html", 
-        "models/project", 
+define ["jquery",
+        "underscore",
+        "backbone",
+        "marionette",
+        "text!templates/projects/page.html",
         "collections/projects",
-        "views/projects/item-view", 
-        ], 
-        ($, _ , Backbone, ProjectsPageTemplate, Project, ProjectsCollection, ProjectItemView )->
-  
-  class ProjectPageView extends Backbone.View
+        "views/projects/item-view"], ($, _ , Backbone, Marionette, ProjectsPageTemplate, ProjectsCollection, ProjectItemView )->
 
-    initialize: (projects)->
-      @projects = projects
-    
+  class ProjectPageView extends Backbone.Marionette.ItemView
+
+    initialize: (option)->
+      @sin = option.sin
+      @collection = new ProjectsCollection()
+      @collection.sin = @sin
+      @collection.fetch( {reset: true} )
+
     render: ()->
       template = $(_.template( ProjectsPageTemplate )())
 
-      _.each @projects, (project)->
-        projec_object = new Project( project )
-        projec_view = new ProjectItemView( { model: projec_object } )
+      _.each @collection.models, (project)->
+        projec_view = new ProjectItemView( { model: project } )
         template.find("ul#projects").append( projec_view.render() )
 
       @$el.html( template.html() )
+      @$el
