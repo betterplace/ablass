@@ -1,4 +1,4 @@
-db/*.sqlite3
+db/*.sqlite3*
 log
 .DS_Store
 coverage
@@ -6,3 +6,5 @@ tmp
 .ruby-version
 .ruby-gemset
 tags
+public/uploads/tmp
+public/uploads/sin_project

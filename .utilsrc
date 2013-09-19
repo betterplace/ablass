@@ -1,5 +1,24 @@
 # vim: set ft=ruby:
 
+
 probe do
   test_framework :rspec
+end
+
+search do
+  prune_dirs /\A(\.svn|\.git|CVS|tmp|pkg)\z/, 'coverage'
+  skip_files /(\A\.|\.sw[pon]\z|~\z)/, /\.log\z/, 'tags'
+end
+
+discover do
+  prune_dirs /\A(pkg)\z/, 'coverage'
+#  skip_files /(\A\.|\.sw[pon]\z|~\z)/, /\.log\z/
+end
+
+strip_spaces do
+  prune_dirs /\A(\..*|CVS|pkg)\z/
+end
+
+ssh_tunnel do
+  terminal_multiplexer :tmux
 end

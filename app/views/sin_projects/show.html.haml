@@ -3,7 +3,7 @@
     %span.glyphicon.glyphicon-chevron-left
     Projects
 .project-show-page
-  %img.img-responsive.project-image{src: "/jquery_mobile/images/skatistanbig.jpg"}/
+  %img.img-responsive.project-image{ src: @sin_project.big_picture_url }/
   .intro
     %h1= @sin_project.name
     =link_to 'jetzt gewissen erleichtern…', temperature_sin_project_url(@sin_project.sin, @sin_project), class: ["btn", "btn-danger", "btn-lg"]
@@ -12,15 +12,10 @@
       .percentage
         .value
           .banner done
-          73%
+          #{@sin_project.betterplace_progress_percentage}%
       .money
         .value
           .banner still needed
-          e265
+          = number_to_currency @sin_project.betterplace_open_amount_in_cents / 100, unit: '€', precision: 0, format: '%n%u'
   .description
-    %p With 68% of Afghanistan's population under the age of 25, Skateistan strongly believes that youth are the ones most capable of bringing about social change.
-    %p Skateistan is an Afghan NGO which operates Afghanistan's (and the world's) first co-educational skateboarding school. The Skateistan school engages nearly 400 Kabul youth weekly through skateboarding, and provides them with new opportunities in cross-cultural interaction, education, and personal empowerment programs.
-    %p The students (ages 5-17) come from all of Afghanistan's diverse ethnic and socioeconomic backgrounds, and include 40% female students, hundreds of streetworking children, and youth with disabilities. They develop skills in skateboarding, leadership, problem-solving, multimedia, and creative arts. The students themselves decide what they want to learn; we connect them with a safe space and opportunities for them to develop the skills that they consider important.
-    %p For Afghan girls Skateistan's programming is especially important as there are very few recreational opportunities for females. For example, it is not culturally acceptable for girls in Afghanistan to ride bicycles or play sports in public.
-    %p Skateistan has been active in Kabul since 2007 - with our facility built in 2009 - and in that time we've seen that Afghan youth of all ethnicities, genders, and socioeconomic backgrounds love to skateboard. Skateistan brings them together, equipping young men and women to lead their communities toward social change and development.
-    %p In 2012 Skateistan will be opening its second Afghan facility in Mazar-e-Sharif, Northern Afghanistan. It will have space to teach up to 1000 youth weekly. Our program gives hundreds of oppressed youth a voice. Education and the opportunity for self-expression can break the cycles of poverty, illiteracy and exclusion, with sport paving the way.
+    #{@sin_project.betterplace_description.html_safe}

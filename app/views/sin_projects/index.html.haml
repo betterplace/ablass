@@ -6,7 +6,7 @@
 %h1= t('.title', sin_name: current_sin.name)
 %ul.list-unstyled.link-list
   - for sin_project in @sin_projects
-    %li{style: "background-image: url('http://asset1.betterplace.org/paperclip/000/289/160/profile_thumb_Screen%20shot%202012-08-24%20at%2012.21.53%20PM.png')"}
+    %li{style: "background-image: url('#{sin_project.small_picture_url}')"}
       %a{href: sin_project_url(current_sin, sin_project)}
         .text
           %h2= sin_project.name

@@ -16,13 +16,11 @@ class SinProject < ActiveRecord::Base
   delegate :description, :progress_percentage, :open_amount_in_cents,
     to: :betterplace_project, prefix: :betterplace
 
-  def betterplace_carrier_picture
-    betterplace_project.carrier.picture.links.find { |l| l.rel == 'original' }.full?(:href)
-  end
+  mount_uploader :small_picture, SinProjectSmallPictureUploader
+  validates :small_picture, presence: true
 
-  def betterplace_profile_picture
-    betterplace_project.profile_picture.links.find { |l| l.rel == 'original' }.full?(:href)
-  end
+  mount_uploader :big_picture, SinProjectBigPictureUploader
+  validates :big_picture, presence: true
 
   private
 
