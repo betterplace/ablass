@@ -10,10 +10,10 @@
     &euro;
     %span.value
       25
-
   = form_tag sin_project_donations_url(@sin_project.sin, @sin_project) do
     .flames
-      - (1..4).each do |size|
+      - Flame.all.each_with_index do |flame, size|
+        - size += 1 # only 1 to 4 supported for now
         .col-md-3.col-xs-3.no-padding.flame_holder
           = radio_button_tag(:amount_in_cents, flame.amount_in_cents)
           = label_tag("donation_presenter_donation_amount_#{size}", '',
