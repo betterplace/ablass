@@ -4,7 +4,8 @@ define ["jquery",
         "marionette",
         "text!templates/sins/page.html",
         "collections/sins",
-        "views/sins/sin-view"], ($, _ , Backbone, Marionette, SinsPageTemplate, SinsCollection, SinItemView )->
+        "views/sins/sin-view",
+        "app"], ($, _ , Backbone, Marionette, SinsPageTemplate, SinsCollection, SinItemView, App )->
 
   class SinsPageView extends Backbone.Marionette.ItemView
 

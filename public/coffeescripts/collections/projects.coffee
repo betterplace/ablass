@@ -1,6 +1,7 @@
-define ["jquery", "underscore", "backbone", "models/project"],  ( $, _ , Backbone, Project)->
+define ["jquery", "underscore", "backbone", "models/project", "app"],  ( $, _ , Backbone, Project, App)->
+
 
   class Collection extends Backbone.Collection
     model: Project
     url: ()->
-      "/sins/#{@sin}/projects"
+      "#{App.url_root}/sins/#{@sin}/projects.json"

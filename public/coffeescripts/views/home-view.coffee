@@ -9,4 +9,5 @@ define ["jquery", "underscore", "backbone", "text!templates/home.html", "app"], 
       @$el.html( _.template( HomeTemplate )() )
 
     navigateSins: ()->
+      $("body").append("navigateSins")
       App.router.navigate("sins", { trigger: true })

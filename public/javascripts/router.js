@@ -18,7 +18,7 @@
         'sins': 'sinsRoute',
         'sin/:id/projects': 'sinsProjectsRoute',
         'sin/:sin_id/projects/:project_id': 'projectRoute',
-        'projects/:id/amount': 'amountRoute',
+        'projects/:id/amount/:bp_id': 'amountRoute',
         'redeemed': 'donationSuccessRoute'
       };
 

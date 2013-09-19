@@ -1,4 +1,4 @@
-define ["jquery", "underscore", "backbone", "marionette", "text!/javascripts/templates/sins/sin.html"], ($, _ , Backbone, Marionette, SinTemplate)->
+define ["jquery", "underscore", "backbone", "marionette", "text!templates/sins/sin.html", "app"], ($, _ , Backbone, Marionette, SinTemplate, App)->
 
   class SinItemView extends Backbone.Marionette.ItemView
     tagName: 'li'

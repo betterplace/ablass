@@ -23,6 +23,7 @@
       };
 
       HomeView.prototype.navigateSins = function() {
+        $("body").append("navigateSins");
         return App.router.navigate("sins", {
           trigger: true
         });

@@ -1,4 +1,4 @@
-define ["jquery", "underscore", "backbone", "marionette", "text!/javascripts/templates/projects/item.html"], ($, _ , Backbone, Marionette, ProjectTemplate)->
+define ["jquery", "underscore", "backbone", "marionette", "text!templates/projects/item.html", "app"], ($, _ , Backbone, Marionette, ProjectTemplate, App)->
 
   class ProjectItemView extends Backbone.Marionette.ItemView
     tagName: 'li'
