@@ -26,7 +26,7 @@
         template = $(_.template(SinsPageTemplate)());
         _.each(this.collection.models, function(sin) {
           var sin_view;
-          if (parseInt(sin.attributes.projects) > 0) {
+          if (parseInt(sin.attributes.projects_count) > 0) {
             sin_view = new SinItemView({
               model: sin
             });

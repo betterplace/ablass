@@ -6,7 +6,7 @@ define ["jquery", "underscore", "backbone", "text!templates/home.html", "app"], 
         "click button.sins": "navigateSins"
 
     render: ()->
-      @$el.html( _.template( HomeTemplate ) )
+      @$el.html( _.template( HomeTemplate )() )
 
     navigateSins: ()->
       App.router.navigate("sins", { trigger: true })

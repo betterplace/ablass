@@ -19,7 +19,7 @@
       };
 
       HomeView.prototype.render = function() {
-        return this.$el.html(_.template(HomeTemplate));
+        return this.$el.html(_.template(HomeTemplate)());
       };
 
       HomeView.prototype.navigateSins = function() {

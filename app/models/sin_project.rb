@@ -20,8 +20,24 @@ class SinProject < ActiveRecord::Base
     betterplace_project.carrier.picture.links.find { |l| l.rel == 'original' }.full?(:href)
   end
 
+  def image
+    betterplace_carrier_picture
+  end
+
   def betterplace_profile_picture
     betterplace_project.profile_picture.links.find { |l| l.rel == 'original' }.full?(:href)
+  end
+
+  def icon
+    betterplace_profile_picture
+  end
+
+  def needed
+    betterplace_open_amount_in_cents / 100
+  end
+
+  def donated
+    betterplace_progress_percentage
   end
 
   private

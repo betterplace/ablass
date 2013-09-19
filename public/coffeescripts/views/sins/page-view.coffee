@@ -17,7 +17,7 @@ define ["jquery",
       template = $(_.template( SinsPageTemplate )())
 
       _.each @collection.models, (sin)->
-        if parseInt( sin.attributes.projects ) > 0
+        if parseInt( sin.attributes.projects_count ) > 0
           sin_view = new SinItemView( { model: sin } )
           template.find("ul#sins").append( sin_view.render() )
 

@@ -1,3 +1,3 @@
 collection @sins, object_root: false
-attributes :name, :explanation
+attributes :name, :explanation, :projects_count
 
