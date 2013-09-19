@@ -78,7 +78,7 @@ gem "devise"
 
 gem 'heroku'
 
-gem 'tins', require: 'tins/xt'
+gem 'tins', '~>0.10', require: 'tins/xt'
 
 gem 'globalize3', github: 'svenfuchs/globalize3', branch: 'rails4'
 gem 'rails_admin_globalize_field'

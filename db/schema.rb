@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130919094821) do
+ActiveRecord::Schema.define(version: 20130918210910) do
 
   create_table "flames", force: true do |t|
     t.integer  "amount_in_cents"
