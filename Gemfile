@@ -6,7 +6,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3',  group: [:development]
+gem 'pg',       group: [:production]
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -35,7 +36,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :assets do 
+group :assets do
   gem 'chunky_png'
   gem 'compass-rails'
   gem 'sassy-buttons'
@@ -73,6 +74,8 @@ gem 'fuubar', group: :test
 gem 'rails_admin'
 
 gem "devise"
+
+gem 'heroku'
 
 gem 'tins', require: 'tins/xt'
 
