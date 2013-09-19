@@ -4,13 +4,13 @@ en:
     button: absolve
   sins:
     index:
-      title: What is you sin?
+      title: What is your sin?
   sin_projects:
     index:
       title: '%{sin_name}'
       back_button: Sins
     show:
-      button: jetzt gewissen erleichtern…
+      button: Now clear your conscience…
       remaining: still needed
       completed: completed
       back_button: Projects

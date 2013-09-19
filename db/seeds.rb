@@ -11,8 +11,21 @@ flame2   = Flame.create!(amount_in_cents: 15_00)
 flame3   = Flame.create!(amount_in_cents: 25_00)
 flame4   = Flame.create!(amount_in_cents: 50_00)
 
+def switch_locale(locale)
+  old = I18n.locale
+  I18n.locale = :de
+  yield
+ensure
+  I18n.locale = old
+end
+
+
 icon_dir = Rails.root + 'public/images/icons/sins'
 lust     = Sin.create!(name: "lust", explanation: 'some explanation', icon: File.open(icon_dir + 'sin_icon-lust.png'))
+switch_locale :de do
+  lust.name = 'Lust'
+  lust.explanation = 'irgendeine Erklärung'
+end
 gluttony = Sin.create!(name: "gluttony", explanation: 'some explanation', icon: File.open(icon_dir + 'sin_icon-gluttony.png'))
 greed    = Sin.create!(name: "greed", explanation: 'some explanation', icon: File.open(icon_dir + 'sin_icon-greed.png'))
 wrath    = Sin.create!(name: "wrath", explanation: 'some explanation', icon: File.open(icon_dir + 'sin_icon-wrath.png'))
