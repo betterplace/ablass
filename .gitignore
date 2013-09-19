@@ -6,5 +6,4 @@ tmp
 .ruby-version
 .ruby-gemset
 tags
-public/uploads/tmp
-public/uploads/sin_project
+public/uploads
