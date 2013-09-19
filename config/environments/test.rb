@@ -42,5 +42,5 @@ Ablass::Application.configure do
     "http://api.bp42.com/%s/api_v4/%s" % [ locale, path.sub(/\A\/*/, '') ]
   }
 
-  config.asset_host = 'http://localhost:3000'
+  #config.asset_host = 'http://localhost:3000'
 end

@@ -1,5 +1,5 @@
 = content_for :header_back_button do
-  %a.btn.btn-default{href:  sin_project_url(@current_sin, @sin_project)}
+  %a.btn.btn-default{ href: sin_project_url(@current_sin, @sin_project) }
     %span.glyphicon.glyphicon-chevron-left
     Project
 
@@ -11,12 +11,13 @@
     %span.value
       25
 
-  = form_tag betterplace_donation_url(@sin_project).to_s, method: :get do
+  = form_tag betterplace_donation_url(@sin_project).to_s do
     .flames
-      - (1..4).each do |size|
+      - Flame.all.each_with_index do |flame, size|
+        - size += 1 # only 1 to 4 supported for now
         .col-md-3.col-xs-3.no-padding.flame_holder
           = radio_button_tag(:'donation_presenter[donation_amount]',  size)
-          = label_tag("donation_presenter_donation_amount_#{size}", '', class: "flame_#{size}", "data-amount" => size)
+          = label_tag("donation_presenter_donation_amount_#{size}", '', class: "flame_#{size}", "data-amount" => flame.amount_in_cents / 100)
     = hidden_field_tag :client_id, 'ablass'
     = hidden_field_tag :desktop, 'true'
     -# hidden_field_tag :donation_client_reference, '666-23-42-unique'

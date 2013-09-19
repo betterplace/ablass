@@ -6,9 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-flame1   = Flame.create!(amount_in_cents:  500)
-flame2   = Flame.create!(amount_in_cents: 1_500)
-flame3   = Flame.create!(amount_in_cents: 2_500)
+flame1   = Flame.create!(amount_in_cents:  5_00)
+flame2   = Flame.create!(amount_in_cents: 15_00)
+flame3   = Flame.create!(amount_in_cents: 25_00)
+flame4   = Flame.create!(amount_in_cents: 50_00)
 
 icon_dir = Rails.root + 'public/images/icons/sins'
 lust     = Sin.create!(name: "lust", explanation: 'some explanation', icon: File.open(icon_dir + 'sin_icon-lust.png'))
