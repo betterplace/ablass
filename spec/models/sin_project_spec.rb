@@ -64,16 +64,6 @@ describe SinProject do
       it 'fetches betterplace_open_amount_in_cents' do
         expect(sin_project.betterplace_open_amount_in_cents).to eq 182738
       end
-
-      it 'fetches betterplace_carrier_picture' do
-        expect(sin_project.betterplace_carrier_picture).to eq\
-          'https://asset1.bp42.com/assets/default/default_collective-2005453a6247348495bae48a02e70d18.jpg'
-      end
-
-      it 'fetches betterplace_profile_picture' do
-        expect(sin_project.betterplace_profile_picture).to eq\
-          'https://asset1.bp42.com/paperclip/000/289/158/default_girls-merza-sm.jpg'
-      end
     end
   end
 end

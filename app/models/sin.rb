@@ -9,6 +9,9 @@ class Sin < ActiveRecord::Base
 
   has_many :projects, class_name: SinProject
 
+  mount_uploader :icon, SinIconUploader
+  validates :icon, presence: true
+
   def to_param
     name
   end
