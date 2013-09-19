@@ -1,12 +1,23 @@
+= content_for :header_back_button do
+  %a.btn.btn-default{href:  sin_project_url(@current_sin, @sin_project)}
+    %span.glyphicon.glyphicon-chevron-left
+    Project
+
 .temperature_page
   %h1 
     How Gravely have you sinned?
+  .donation_amount
+    &euro;
+    %span.value
+      25
+
   = form_tag betterplace_donation_url(@sin_project).to_s, method: :get do
-    - (1..5).each do |size|
-      = radio_button_tag(:'donation_presenter[donation_amount]',  size)
-      = label_tag("donation_presenter_donation_amount_#{size}", '', class: "flame_#{size}")
+    .flames
+      - (1..4).each do |size|
+        .col-md-3.col-xs-3.no-padding.flame_holder
+          = radio_button_tag(:'donation_presenter[donation_amount]',  size)
+          = label_tag("donation_presenter_donation_amount_#{size}", '', class: "flame_#{size}", "data-amount" => size)
     = hidden_field_tag :client_id, 'ablass'
     -# hidden_field_tag :donation_client_reference, '666-23-42-unique'
     .buttons
-      = submit_tag 'Choose', class: ["btn", "btn-danger"]
-
+      = submit_tag 'Choose', class: ["btn", "btn-danger","btn-really-large"]

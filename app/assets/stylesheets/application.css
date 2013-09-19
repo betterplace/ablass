@@ -9,14 +9,10 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require_tree ./external
  *= require_tree ./rails_admin
  *= require sin_projects
  *= require start
- *= require generics/project_meter
- *= require generics/link_list
- *= require generics/header
- *= require rails_application/main
- *= require rails_application/sins_index
- *= require rails_application/project_show
- *= require rails_application/temperature
+ *= require_tree ./generics
+ *= require_tree ./rails_application
  */
