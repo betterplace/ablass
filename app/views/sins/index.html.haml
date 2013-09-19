@@ -1,7 +1,7 @@
 %h1= t('.title')
 %ul.list-unstyled.link-list
   - for sin in @sins
-    %li{style: "background-image: url(/images/icons/sins/sin_icon-#{sin.name}.png)"}
+    %li{style: "background-image: url(#{sin.icon_url})"}
       %a{href: sin_projects_url(sin)}
         .text
           %h2= sin.name
