@@ -1,4 +1,6 @@
 class SinProjectsController < ApplicationController
+  include Concerns::SinShared
+
   respond_to :html
   respond_to :json, only: %i[ index show ]
 
@@ -17,11 +19,5 @@ class SinProjectsController < ApplicationController
   def temperature
     @sin_project = current_sin.projects.find(params[:id])
     respond_with(@sin_project)
-  end
-
-  private
-
-  def current_sin
-    @current_sin ||= Sin.find_by_param(params[:sin_id])
   end
 end

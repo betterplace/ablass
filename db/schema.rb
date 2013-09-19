@@ -13,6 +13,16 @@
 
 ActiveRecord::Schema.define(version: 20130919094821) do
 
+  create_table "donations", force: true do |t|
+    t.integer  "sin_project_id",             null: false
+    t.integer  "amount_in_cents",            null: false
+    t.string   "token",           limit: 22, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "donations", ["token"], name: "index_donations_on_token", unique: true
+
   create_table "flames", force: true do |t|
     t.integer  "amount_in_cents"
     t.datetime "created_at"
