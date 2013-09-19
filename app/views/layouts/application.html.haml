@@ -15,5 +15,5 @@
     = yield(:head)
   %body.bck-gradient{class: "#{controller.controller_name}_controller" }
     = render "layouts/header" unless @no_header
-    .container.content
+    #content.container.content
       = yield
