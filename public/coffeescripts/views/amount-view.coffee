@@ -1,7 +1,7 @@
 define ["jquery", "underscore", "backbone", "text!templates/amount.html", "app"], ($, _ , Backbone, AmountTemplate, App)->
 
   class AmountView extends Backbone.View
-    
+
     initialize: ()->
       @delegateEvents
         "click button.donate":  "navigateToBetterplace"
@@ -12,12 +12,13 @@ define ["jquery", "underscore", "backbone", "text!templates/amount.html", "app"]
     render: ()->
       @$el.html( _.template( AmountTemplate ) )
 
-    setProjectId: (project_id)->
+    setProjectId: (project_id, betterplace_id)->
       @project_id = project_id
+      @betterplace_id = betterplace_id
 
     navigateToBetterplace: ()->
       amount = @$("input").val()
-      window.location.href =  "https://www.bp42.com/en/projects/#{@project_id}/client_donations/new?client_id=ablass&amount=#{amount}"
+      window.location.href =  "https://www.bp42.com/en/projects/#{@betterplace_id}/client_donations/new?client_id=ablass&amount=#{amount}"
 
     smallSins: ()->
       @$("input").val("5")

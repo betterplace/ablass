@@ -14,8 +14,9 @@
 
       ApplicationController.prototype.initialize = function(app) {
         this.app = app;
+        this.project = {};
         Layout.render();
-        return $("body").prepend(Layout.el);
+        return $("body").html(Layout.el);
       };
 
       ApplicationController.prototype.homeRoute = function() {
@@ -28,6 +29,7 @@
 
       ApplicationController.prototype.sinsRoute = function() {
         var router;
+        $("body").append("sinsRoute");
         router = this.app.router;
         return require(["views/sins/page-view"], function(SinsPageView) {
           var mySinsPageView;
@@ -83,7 +85,7 @@
           });
           Layout.content.on("show", function() {
             return myProjectView.$("button.donate").click(function() {
-              return router.navigate("/projects/" + project_id + "/amount", {
+              return router.navigate("/projects/" + project_id + "/amount/" + (project.get("betterplace_id")), {
                 trigger: true
               });
             });
@@ -94,11 +96,11 @@
         });
       };
 
-      ApplicationController.prototype.amountRoute = function(id) {
+      ApplicationController.prototype.amountRoute = function(id, bp_id) {
         return require(["views/amount-view"], function(AmountView) {
           var myAmountView;
           myAmountView = new AmountView();
-          myAmountView.setProjectId(id);
+          myAmountView.setProjectId(id, bp_id);
           return Layout.content.show(myAmountView);
         });
       };

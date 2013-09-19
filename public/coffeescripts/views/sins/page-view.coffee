@@ -4,7 +4,8 @@ define ["jquery",
         "marionette",
         "text!templates/sins/page.html",
         "collections/sins",
-        "views/sins/sin-view"], ($, _ , Backbone, Marionette, SinsPageTemplate, SinsCollection, SinItemView )->
+        "views/sins/sin-view",
+        "app"], ($, _ , Backbone, Marionette, SinsPageTemplate, SinsCollection, SinItemView, App )->
 
   class SinsPageView extends Backbone.Marionette.ItemView
 
@@ -17,7 +18,7 @@ define ["jquery",
       template = $(_.template( SinsPageTemplate )())
 
       _.each @collection.models, (sin)->
-        if parseInt( sin.attributes.projects ) > 0
+        if parseInt( sin.attributes.projects_count ) > 0
           sin_view = new SinItemView( { model: sin } )
           template.find("ul#sins").append( sin_view.render() )
 

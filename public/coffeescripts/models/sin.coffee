@@ -1,3 +1,3 @@
-define ["jquery", "underscore", "backbone"],  ( $, _ , Backbone)->
+define ["jquery", "underscore", "backbone", "app"],  ( $, _ , Backbone, App)->
 
   class Sin extends Backbone.Model

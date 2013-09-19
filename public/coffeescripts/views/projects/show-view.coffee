@@ -1,4 +1,4 @@
-define ["jquery", "underscore", "backbone", "marionette", "text!/javascripts/templates/projects/show.html"], ($, _ , Backbone, Marionette, ProjectTemplate)->
+define ["jquery", "underscore", "backbone", "marionette", "text!templates/projects/show.html", "app"], ($, _ , Backbone, Marionette, ProjectTemplate, App)->
 
   class ProjectShowView extends Backbone.Marionette.ItemView
     tagName: 'div'

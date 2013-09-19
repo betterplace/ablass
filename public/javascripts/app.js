@@ -1,6 +1,6 @@
 (function() {
 
-  define(["backbone", "marionette", "config/event_handler", "router"], function(Backbone, Marionette, EventHandler, Router) {
+  define(["backbone", "marionette", "config/event_handler", "router", "application_controller"], function(Backbone, Marionette, EventHandler, Router, ApplicationController) {
     var SingleApp;
     SingleApp = _.once(function() {
       var Ablass;
@@ -9,6 +9,10 @@
       Ablass.vent = EventHandler;
       Ablass.on("initialize:after", function(options) {
         if (Backbone.history) return Backbone.history.start();
+      });
+      Ablass.url_root = "http://localhost:3000";
+      Ablass.router = new Router({
+        controller: new ApplicationController(Ablass)
       });
       return Ablass;
     });

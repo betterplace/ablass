@@ -4,8 +4,9 @@ define [ "jquery", "marionette", "config/event_handler", "views/layouts/ablass"]
 
     initialize: ( app )->
       @app = app
+      @project = {}
       Layout.render()
-      $("body").prepend(Layout.el);
+      $("body").html(Layout.el);
 
     homeRoute: ()->
       require ["views/home-view"], (HomeView)->
@@ -13,6 +14,7 @@ define [ "jquery", "marionette", "config/event_handler", "views/layouts/ablass"]
         Layout.content.show( myHomeView )
 
     sinsRoute: ()->
+      $("body").append("sinsRoute")
       router = @app.router
       require ["views/sins/page-view"], (SinsPageView)->
         mySinsPageView = new SinsPageView()
@@ -51,16 +53,16 @@ define [ "jquery", "marionette", "config/event_handler", "views/layouts/ablass"]
 
         Layout.content.on "show", ()->
           myProjectView.$("button.donate").click ()->
-            router.navigate("/projects/#{project_id}/amount", {trigger: true })
+            router.navigate("/projects/#{project_id}/amount/#{project.get("betterplace_id")}", {trigger: true })
 
         myProjectView.model.fetch( {reset: true} )
 
 
 
-    amountRoute: (id)->
+    amountRoute: (id, bp_id)->
       require ["views/amount-view"], (AmountView)->
         myAmountView = new AmountView()
-        myAmountView.setProjectId( id )
+        myAmountView.setProjectId( id, bp_id )
         Layout.content.show( myAmountView )
 
 

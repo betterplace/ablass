@@ -19,4 +19,9 @@ class Sin < ActiveRecord::Base
   def self.find_by_param(name)
     where(name: name).first
   end
+
+
+  def projects_count
+    projects.count
+  end
 end

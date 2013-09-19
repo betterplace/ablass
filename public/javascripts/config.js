@@ -1,7 +1,7 @@
 (function() {
 
   require.config({
-    deps: ['init'],
+    deps: ["config/initialize/underscore", 'app', 'init'],
     paths: {
       libs: '../javascripts/libs',
       plugins: '../javascripts/plugins',

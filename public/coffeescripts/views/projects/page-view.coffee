@@ -4,7 +4,8 @@ define ["jquery",
         "marionette",
         "text!templates/projects/page.html",
         "collections/projects",
-        "views/projects/item-view"], ($, _ , Backbone, Marionette, ProjectsPageTemplate, ProjectsCollection, ProjectItemView )->
+        "views/projects/item-view",
+        "app"], ($, _ , Backbone, Marionette, ProjectsPageTemplate, ProjectsCollection, ProjectItemView, App )->
 
   class ProjectPageView extends Backbone.Marionette.ItemView
 

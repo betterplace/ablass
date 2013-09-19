@@ -22,6 +22,22 @@ class SinProject < ActiveRecord::Base
   mount_uploader :big_picture, SinProjectBigPictureUploader
   validates :big_picture, presence: true
 
+  def image
+    big_picture_url
+  end
+
+  def icon
+    small_picture_url
+  end
+
+  def needed
+    betterplace_open_amount_in_cents / 100
+  end
+
+  def donated
+    betterplace_progress_percentage
+  end
+
   private
 
   def betterplace_project

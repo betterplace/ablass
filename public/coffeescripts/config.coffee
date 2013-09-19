@@ -1,7 +1,8 @@
 require.config
 
-  # Initialize the application with the main application file.
-  deps: ['init']
+  # Initialize the application
+  # Start the application with the main application file.
+  deps: [ "config/initialize/underscore", 'app', 'init']
 
   paths:
     # JavaScript folders.

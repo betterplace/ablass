@@ -79,12 +79,13 @@ Ablass::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # Where the betterplace platform lives:
-  config.betterplace_platform_host = 'www.betterplace.org'
+  #config.betterplace_platform_host = 'www.betterplace.org' TODO use this later on
+  config.betterplace_platform_host = 'bp42.com'
 
   # betterplace API root
   config.betterplace_api = -> path, locale: I18n.locale {
     "http://api.betterplace.org/%s/api_v4/%s" % [ locale, path.sub(/\A\/*/, '') ]
   }
 
-  config.asset_host = 'http://www.ablass-app.org'
+  config.asset_host = 'http://www.ablass-app.de'
 end
