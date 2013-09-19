@@ -17,8 +17,10 @@ class SinProject < ActiveRecord::Base
     to: :betterplace_project, prefix: :betterplace
 
   mount_uploader :small_picture, SinProjectSmallPictureUploader
+  validates :small_picture, presence: true
 
   mount_uploader :big_picture, SinProjectBigPictureUploader
+  validates :big_picture, presence: true
 
   private
 
