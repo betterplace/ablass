@@ -1,21 +1,71 @@
 .temperature_page
-  input[type="radio"]
-    display: none
+  .donation_amount
+    padding: 12px 0
+    width: 4em
+    margin: 23px auto 0 auto
+    background-color: white
+    -moz-box-shadow: 0 0 5px 5px #888
+    -webkit-box-shadow: 0 0 5px 5px#888
+    box-shadow: 0 0 5px 5px #888
+    color: #b51d22
+    font-size: 2em
+
+  text-align: center
+  .flames
+    max-width: 500px
+    margin: 0 auto -25px
+    height: 150px
+    padding-bottom: 20px
+
+    input[type="radio"]
+      display: none
+
+    label
+      background: url('/images/sprites/flame-off.png') no-repeat
+      //background-position: right 50% bottom 15px
+      background-position: 50% 100%
+      background-size: 50px 80px 
+      height: 130px
+      width: 70px
+      display:inline-block
+      padding: 0 0 0 0px
+
+    label:before
+      content: ''
+      display: block
+      position: absolute
+      z-index: -1
+
+      height: 140px
+      width: 70px
+
+      /* Your offset */
+      top: 14px
+
+      border-bottom: 5px solid brown
+      border-radius: 46px
 
 
-  input[type="radio"] + label
-    background: url('/images/sprites/flame-off.png') no-repeat
-    background-size: 50px 80px 
-    height: 80px
-    width: 50px
-    display:inline-block
-    padding: 0 0 0 0px
+
+    input[type="radio"]:checked + label, label:hover
+      background-image: url('/images/sprites/flame-on.png')
 
 
-  input[type="radio"]:checked + label
-    background: url('/images/sprites/flame-on.png') no-repeat
-    background-size: 50px 80px 
-    height: 80px
-    width: 50px
-    display:inline-block
-    padding: 0 0 0 0px
+    label.flame_1
+      background-size: 25px 40px
+
+    label.flame_2
+      background-size: 40px 64px
+
+    label.flame_3
+      background-size: 54px 90px 
+
+    label.flame_4
+      background-size: 63px 117px
+
+  .buttons
+    clear: both
+    .btn
+      margin-top: 50px
+
+
