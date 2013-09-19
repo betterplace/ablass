@@ -65,10 +65,11 @@ Ablass::Application.routes.draw do
       member do
         get 'temperature'
       end
-      resources :donations, only: %i[create show]
+      resources :donations, only: :create
     end
   end
   resources :flames, only: %i[index]
+  resource :donation, only: :show
 
   # Admin backend
   devise_for :users
