@@ -1,5 +1,5 @@
 = content_for :header_back_button do
-  %a.btn.btn-default{ href: sin_project_url(@current_sin, @sin_project) }
+  %a.btn.btn-default{href:  sin_project_url(@current_sin, @sin_project)}
     %span.glyphicon.glyphicon-chevron-left
     Project
 
@@ -13,13 +13,12 @@
 
   = form_tag sin_project_donations_url(@sin_project.sin, @sin_project) do
     .flames
-      - Flame.all.each_with_index do |flame, size|
-        - size += 1 # only 1 to 4 supported for now
+      - (1..4).each do |size|
         .col-md-3.col-xs-3.no-padding.flame_holder
-
           = radio_button_tag(:amount_in_cents, flame.amount_in_cents)
           = label_tag("donation_presenter_donation_amount_#{size}", '',
             class: "flame_#{size}",
             "data-amount" => flame.amount_in_cents / 100)
+
     .buttons
       = submit_tag 'Choose', class: ["btn", "btn-danger","btn-really-large"]

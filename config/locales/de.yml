@@ -1,4 +1,20 @@
 de:
+  homepage:
+    title: Wasch dich von deinen Sünden rein.
+    button: Ablassen
   sins:
     index:
       title: Art Deiner Sünde
+  sin_projects:
+    index:
+      title: Kategorie %{sin_name}
+      back_button: Sünden
+    show:
+      button: jetzt gewissen erleichtern…
+      remaining: fehlen noch
+      completed: finanziert
+      back_button: Projekte
+    temperature:
+      title: Wie schwer hast Du gesündigt?
+      button: Zur Absolution
+      back_button: Projekt

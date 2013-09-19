@@ -1,7 +1,7 @@
 = content_for :header_back_button do
   %a.btn.btn-default{href: sins_path}
     %span.glyphicon.glyphicon-chevron-left
-    Sins
+    = t('.back_button')
 
 %h1= t('.title', sin_name: current_sin.name)
 %ul.list-unstyled.link-list

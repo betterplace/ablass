@@ -1,21 +1,25 @@
 = content_for :header_back_button do
   %a.btn.btn-default{href: sin_projects_url(@sin_project.sin)}
     %span.glyphicon.glyphicon-chevron-left
-    Projects
+    = t('.back_button')
+
 .project-show-page
   %img.img-responsive.project-image{ src: @sin_project.big_picture_url }/
   .intro
     %h1= @sin_project.name
-    =link_to 'jetzt gewissen erleichtern…', temperature_sin_project_url(@sin_project.sin, @sin_project, anchor: "content"), class: ["btn", "btn-danger", "btn-lg"]
+    %a.btn.btn-danger.btn-really-large{href: temperature_sin_project_url(@sin_project.sin, @sin_project, anchor: "content")}
+      = t('.button')
+      %span.glyphicon.glyphicon-chevron-right
+
   .counters
     .project-meter
       .percentage
         .value
-          .banner done
+          .banner= t('.completed')
           #{@sin_project.betterplace_progress_percentage}%
       .money
         .value
-          .banner still needed
+          .banner= t('.needed')
           = number_to_currency @sin_project.betterplace_open_amount_in_cents / 100, unit: '€', precision: 0, format: '%n%u'
   .description
     #{@sin_project.betterplace_description.html_safe}

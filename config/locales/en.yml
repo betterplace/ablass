@@ -1,7 +1,20 @@
 en:
+  homepage:
+    title: Cleanse your sins.
+    button: absolve
   sins:
     index:
-      title: What manner of sin have you commited?
+      title: What is you sin?
   sin_projects:
     index:
-      title: You are guilty of %{sin_name}. To which project shall you donate to redeem yourself?
+      title: '%{sin_name}'
+      back_button: Sins
+    show:
+      button: jetzt gewissen erleichtern…
+      remaining: still needed
+      completed: completed
+      back_button: Projects
+    temperature:
+      title: How gravely have you sinned?
+      button: To absolution
+      back_button: Project
