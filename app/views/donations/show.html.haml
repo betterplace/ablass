@@ -1,0 +1,6 @@
+%h1= t('.title')
+
+%ul
+  %li= link_to t('.facebook_link'), '#'
+  %li= link_to t('.email_link'), "mailto:?subject=#{t('.email_link_subject')}"
+  %li= link_to t('.repeat_link'), sins_url

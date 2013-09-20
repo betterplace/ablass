@@ -13,6 +13,16 @@
 
 ActiveRecord::Schema.define(version: 20130919094821) do
 
+  create_table "donations", force: true do |t|
+    t.integer  "sin_project_id",             null: false
+    t.integer  "amount_in_cents",            null: false
+    t.string   "token",           limit: 22, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "donations", ["token"], name: "index_donations_on_token", unique: true
+
   create_table "flames", force: true do |t|
     t.integer  "amount_in_cents"
     t.datetime "created_at"
@@ -58,11 +68,11 @@ ActiveRecord::Schema.define(version: 20130919094821) do
   add_index "sin_projects", ["betterplace_id"], name: "index_sin_projects_on_betterplace_id", unique: true
 
   create_table "sin_translations", force: true do |t|
-    t.integer  "sin_id",      null: false
-    t.string   "locale",      null: false
+    t.integer  "sin_id",       null: false
+    t.string   "locale",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "name"
+    t.string   "display_name"
     t.text     "explanation"
   end
 
@@ -70,8 +80,9 @@ ActiveRecord::Schema.define(version: 20130919094821) do
   add_index "sin_translations", ["sin_id"], name: "index_sin_translations_on_sin_id"
 
   create_table "sins", force: true do |t|
-    t.string   "name",        null: false
-    t.text     "explanation", null: false
+    t.string   "name",         null: false
+    t.string   "display_name", null: false
+    t.text     "explanation",  null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "icon"

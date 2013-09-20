@@ -4,20 +4,21 @@
     Project
 
 .temperature_page
-  %h1 
+  %h1#heading
     How Gravely have you sinned?
   .donation_amount
     &euro;
     %span.value
       25
-
-  = form_tag betterplace_donation_url(@sin_project).to_s, method: :get do
+  = form_tag sin_project_donations_url(@sin_project.sin, @sin_project) do
     .flames
-      - (1..4).each do |size|
+      - Flame.all.each_with_index do |flame, size|
+        - size += 1 # only 1 to 4 supported for now
         .col-md-3.col-xs-3.no-padding.flame_holder
-          = radio_button_tag(:'donation_presenter[donation_amount]',  size)
-          = label_tag("donation_presenter_donation_amount_#{size}", '', class: "flame_#{size}", "data-amount" => size)
-    = hidden_field_tag :client_id, 'ablass'
-    -# hidden_field_tag :donation_client_reference, '666-23-42-unique'
+          = radio_button_tag(:amount_in_cents, flame.amount_in_cents)
+          = label_tag("donation_presenter_donation_amount_#{size}", '',
+            class: "flame_#{size}",
+            "data-amount" => flame.amount_in_cents / 100)
+
     .buttons
       = submit_tag 'Choose', class: ["btn", "btn-danger","btn-really-large"]

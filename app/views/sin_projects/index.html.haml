@@ -1,9 +1,9 @@
 = content_for :header_back_button do
   %a.btn.btn-default{href: sins_path}
     %span.glyphicon.glyphicon-chevron-left
-    Sins
+    = t('.back_button')
 
-%h1= t('.title', sin_name: current_sin.name)
+%h1= t('.title', sin_name: current_sin.display_name)
 %ul.list-unstyled.link-list
   - for sin_project in @sin_projects
     %li{style: "background-image: url('#{sin_project.small_picture_url}')"}

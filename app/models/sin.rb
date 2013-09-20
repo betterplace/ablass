@@ -1,6 +1,8 @@
 class Sin < ActiveRecord::Base
   validates :name, presence: true, uniqueness: true
-  translates :name
+
+  validates :display_name, presence: true
+  translates :display_name
 
   validates :explanation, presence: true
   translates :explanation

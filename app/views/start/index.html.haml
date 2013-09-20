@@ -1,5 +1,8 @@
 .start_page
   .intro
     %img{src: '/images/A-logo_devilhorns_cream.png'}
-    %h1 Wasch dich von deinen Sünden rein.
-  = link_to 'Zur Absolution', sins_url, class: ["btn", "btn-danger","btn-really-large"]
+    %h1
+      = I18n.t('homepage.title')
+  %a.btn.btn-danger.btn-really-large{href: sins_url}
+    = I18n.t('homepage.button')
+    %span.glyphicon.glyphicon-chevron-right
