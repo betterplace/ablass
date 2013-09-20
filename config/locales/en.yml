@@ -18,3 +18,11 @@ en:
       title: How gravely have you sinned?
       button: To absolution
       back_button: Project
+  donations:
+    show:
+      title: You've succeeded in cleansing your soul!
+      facebook_link: Tell your friends about your confession
+      email_link: Recommend this app to other sinners
+      email_link_subject: I've come to know about your most recent sin…
+      repeat_link: Still having pangs of conscience? Try again
+

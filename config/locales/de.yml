@@ -18,3 +18,10 @@ de:
       title: Wie schwer hast Du gesündigt?
       button: Zur Absolution
       back_button: Projekt
+  donations:
+    show:
+      title: Du hast erfolgreich Deine Seele gewaschen!
+      facebook_link: Erzähl Deinen Freunden von Deiner Beichte
+      email_link: Diese App anderen Sündern empfehlen
+      email_link_subject: Ich habe von deiner letzten Sünde erfahren…
+      repeat_link: Immer noch Gewissensbisse? Versuch’s noch einmal
