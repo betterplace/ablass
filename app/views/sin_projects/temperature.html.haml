@@ -5,7 +5,7 @@
 
 .temperature_page
   %h1#heading
-    How Gravely have you sinned?
+    = t('.title')
   .donation_amount
     &euro;
     %span.value
@@ -22,4 +22,4 @@
             class: "flame_#{size}")
 
     .buttons
-      = submit_tag 'Choose', class: ["btn", "btn-danger","btn-really-large"]
+      = submit_tag t('.button'), class: ["btn", "btn-danger","btn-really-large"]

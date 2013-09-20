@@ -12,8 +12,8 @@ de:
       title: '%{sin_name}'
       back_button: Sünden
     show:
-      button: Jetzt Gewissen erleichtern…
-      remaining: fehlen noch
+      button: Jetzt Gewissen erleichtern
+      needed: fehlen noch
       completed: finanziert
       back_button: Projekte
     temperature:

@@ -12,8 +12,8 @@ en:
       title: '%{sin_name}'
       back_button: Sins
     show:
-      button: clear your conscience
-      remaining: still needed
+      button: Clear your conscience
+      needed: still needed
       completed: completed
       back_button: Projects
     temperature:
