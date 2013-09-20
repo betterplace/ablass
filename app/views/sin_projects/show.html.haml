@@ -7,7 +7,7 @@
   %img.img-responsive.project-image{ src: @sin_project.big_picture_url }/
   .intro
     %h1= @sin_project.name
-    %a.btn.btn-danger.btn-really-large{href: temperature_sin_project_url(@sin_project.sin, @sin_project, { anchor: "content" } | params.slice(:sin_detail)) }
+    %a.btn.btn-danger.btn-lg{href: temperature_sin_project_url(@sin_project.sin, @sin_project, { anchor: "content" } | params.slice(:sin_detail)) }
       = t('.button')
       %span.glyphicon.glyphicon-chevron-right
 

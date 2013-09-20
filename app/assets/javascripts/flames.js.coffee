@@ -1,9 +1,8 @@
 $ ->
   $(".flames").each ->
-    select_flame = ->
-      amount = $(this).data('amount')
+    set_donation_amount_label = ->
+      amount = $("input[type=radio]:checked")[0].value / 100
       $(".donation_amount .value").html(amount)
-      $(this).prev().click()
 
-    $("label").click(select_flame)
-    $(".flames label")[0].click()
+    $("label, input[type=radio]").click(set_donation_amount_label)
+    $(".flames input[type=radio]")[0].click()

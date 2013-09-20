@@ -12,7 +12,7 @@ en:
       title: '%{sin_name}'
       back_button: Sins
     show:
-      button: Now clear your conscience…
+      button: clear your conscience
       remaining: still needed
       completed: completed
       back_button: Projects

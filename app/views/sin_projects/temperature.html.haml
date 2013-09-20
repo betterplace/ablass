@@ -18,9 +18,8 @@
         - size += 1 # only 1 to 4 supported for now
         .col-md-3.col-xs-3.no-padding.flame_holder
           = radio_button_tag(:amount_in_cents, flame.amount_in_cents)
-          = label_tag("donation_presenter_donation_amount_#{size}", '',
-            class: "flame_#{size}",
-            "data-amount" => flame.amount_in_cents / 100)
+          = label_tag("amount_in_cents_#{flame.amount_in_cents}", '',
+            class: "flame_#{size}")
 
     .buttons
       = submit_tag 'Choose', class: ["btn", "btn-danger","btn-really-large"]
