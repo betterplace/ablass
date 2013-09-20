@@ -4,9 +4,10 @@
     %meta{:name => "viewport", :content => "width=device-width, initial-scale=1, maximum-scale=1"}
     %title= content_for?(:title) ? yield(:title) : "Ablass"
     %meta{:content => content_for?(:description) ? yield(:description) : "Ablass", :name => "description"}
+    %link{rel:"stylesheet", href: "//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"}
     = stylesheet_link_tag :mobile, :media => "all"
     = csrf_meta_tags
     = yield(:head)
-  %body
+  %body.bck-gradient
     = yield
-    
+
