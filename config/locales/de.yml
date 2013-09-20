@@ -27,6 +27,11 @@ de:
       email_link: Diese App anderen Sündern empfehlen
       email_link_subject: Ich habe von deiner letzten Sünde erfahren…
       repeat_link: Immer noch Gewissensbisse? Versuch’s noch einmal
+    create:
+      title: Warte…
+      link_text: Hier klicken,
+      link_suffix: wenn du nicht weitergeleitet wirst.
+      redirect_button: Weiter
   social_links:
     title: Ablass app
     description: Wasch' dich von deinen Sünden rein.

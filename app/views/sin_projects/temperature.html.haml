@@ -11,6 +11,7 @@
     %span.value
       25
   = form_tag sin_project_donations_url(@sin_project.sin, @sin_project) do
+    = hidden_field_tag :standalone, '0'
     - params[:sin_detail].full? do |sd|
       = hidden_field_tag :sin_detail, sd
     .flames

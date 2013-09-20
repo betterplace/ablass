@@ -5,7 +5,7 @@ class DonationsController < ApplicationController
     sin_project = current_sin.projects.find(params[:project_id])
     donation = Donation.create!(
       { sin_project: sin_project } | params.slice(:amount_in_cents, :sin_detail))
-    redirect_to betterplace_donation_url(
+    @betterplace_donation_url = betterplace_donation_url(
       sin_project,
       params: {
         :desktop                                         => true,
@@ -14,13 +14,14 @@ class DonationsController < ApplicationController
         :'donation_presenter[donation_client_reference]' => donation.token,
       }
     )
+    params[:standalone].to_i == 1 or redirect_to @betterplace_donation_url
   end
 
   def show
     @no_header = true
     if @donation = Donation.find_by_token(params[:donation_client_reference])
     else
-      render text: 'ouch, no such donation', status: :not_found
+      render text: 'ouch, no such donation', status: :not_found # TODO make this a bit nicer
     end
   end
 
