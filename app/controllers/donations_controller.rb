@@ -16,6 +16,7 @@ class DonationsController < ApplicationController
   end
 
   def show
+    @no_header = true
     if @donation = Donation.find_by_token(params[:donation_client_reference])
     else
       render text: 'ouch, no such donation', status: :not_found

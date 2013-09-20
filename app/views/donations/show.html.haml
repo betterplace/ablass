@@ -1,6 +1,9 @@
-%h1= t('.title')
-
-%ul
-  %li= link_to t('.facebook_link'), '#'
-  %li= link_to t('.email_link'), "mailto:?subject=#{t('.email_link_subject')}"
-  %li= link_to t('.repeat_link'), sins_url
+.postdonate_page
+  .intro
+    %img{src: '/images/A-logo_halo.png'}
+    %h1= t('.title')
+    
+  %ul.list-unstyled.links
+    %li.facebook= link_to t('.facebook_link'), facebook_share_url
+    %li.email= link_to t('.email_link'), "mailto:?subject=#{t('.email_link_subject')}"
+    %li.sin_again= link_to t('.repeat_link'), sins_url

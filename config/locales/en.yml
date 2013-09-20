@@ -25,4 +25,6 @@ en:
       email_link: Recommend this app to other sinners
       email_link_subject: I've come to know about your most recent sin…
       repeat_link: Still having pangs of conscience? Try again
-
+  social_links:
+    title: Ablass app
+    description: Cleanse your sins.

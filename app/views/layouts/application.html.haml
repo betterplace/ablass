@@ -4,8 +4,10 @@
     %meta{:name => "viewport", :content => "width=device-width, initial-scale=1, maximum-scale=1"}
     %title= content_for?(:title) ? yield(:title) : "Ablass"
     %meta{:content => content_for?(:description) ? yield(:description) : "Ablass", :name => "description"}
-    %link{rel:"stylesheet", href: "//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"}
     
+    = render "layouts/social_media_gubbins"
+
+    %link{rel:"stylesheet", href: "//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"}
 
     = stylesheet_link_tag :application, :media => "all"
     = javascript_include_tag "application"
