@@ -8,6 +8,7 @@ class DonationsController < ApplicationController
     redirect_to betterplace_donation_url(
       sin_project,
       params: {
+        :desktop                                         => true,
         :client_id                                       => 'ablass',
         :'donation_presenter[donation_amount]'           => donation.amount_in_cents / 100,
         :'donation_presenter[donation_client_reference]' => donation.token,
