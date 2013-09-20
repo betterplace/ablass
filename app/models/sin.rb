@@ -22,8 +22,11 @@ class Sin < ActiveRecord::Base
     where(name: name).first
   end
 
-
   def projects_count
     projects.count
+  end
+
+  def detailed?
+    name == 'other'
   end
 end

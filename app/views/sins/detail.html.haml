@@ -1,0 +1,13 @@
+= content_for :header_back_button do
+  %a.btn.btn-default{ href:  sins_url(params.slice(:sin_detail)) }
+    %span.glyphicon.glyphicon-chevron-left
+    = @sin.display_name
+
+.detail_page
+  %h1= t('.title')
+
+  = form_tag sin_projects_url(@sin), method: :get do
+    .inputs
+      = text_area_tag :sin_detail, params[:sin_detail], cols: 25, rows: 6
+    .buttons
+      = submit_tag 'Send', class: %w[btn btn-danger btn-really-large]

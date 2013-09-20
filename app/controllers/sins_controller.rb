@@ -5,4 +5,10 @@ class SinsController < ApplicationController
     @sins = Sin.all
     respond_with(@sins)
   end
+
+  def detail
+    unless @sin = Sin.find_by_param(params[:id])
+      redirect_to sins_url
+    end
+  end
 end

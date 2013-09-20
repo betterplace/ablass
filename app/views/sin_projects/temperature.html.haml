@@ -11,6 +11,8 @@
     %span.value
       25
   = form_tag sin_project_donations_url(@sin_project.sin, @sin_project) do
+    - params[:sin_detail].full? do |sd|
+      = hidden_field_tag :sin_detail, sd
     .flames
       - Flame.all.each_with_index do |flame, size|
         - size += 1 # only 1 to 4 supported for now

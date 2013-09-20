@@ -5,6 +5,8 @@ de:
   sins:
     index:
       title: Art Deiner Sünde
+    detail:
+      title: Wie genau hast du gesündigt?
   sin_projects:
     index:
       title: '%{sin_name}'

@@ -34,7 +34,7 @@ RailsAdmin.config do |config|
   config.model 'Sin::Translation' do
     visible false
     configure :locale, :hidden
-    include_fields :locale, :name, :explanation
+    include_fields :locale, :display_name, :explanation
   end
 
   # Label methods for model instances:

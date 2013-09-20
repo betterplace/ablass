@@ -5,6 +5,8 @@ en:
   sins:
     index:
       title: What is your sin?
+    detail:
+      title: How exactly have you sinned?
   sin_projects:
     index:
       title: '%{sin_name}'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130919094821) do
+ActiveRecord::Schema.define(version: 20130920130530) do
 
   create_table "donations", force: true do |t|
     t.integer  "sin_project_id",             null: false
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20130919094821) do
     t.string   "token",           limit: 22, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "sin_detail"
   end
 
   add_index "donations", ["token"], name: "index_donations_on_token", unique: true

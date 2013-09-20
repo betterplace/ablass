@@ -1,0 +1,12 @@
+TODO
+====
+
+- Add code to handle deleted sins and sin projects. The should probably still
+  stick around and just be marked as deleted in order for donations / sin
+  projects to still be able to refer to them later on.
+- Add magic icon thingy to allow mobile users to iconize the site on their home
+  layout.
+- Add integration tests:
+  - The use case for a simple sin, including callback.
+  - The use case for a detailed sin, including callback.
+

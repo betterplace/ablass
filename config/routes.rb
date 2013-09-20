@@ -67,6 +67,7 @@ Ablass::Application.routes.draw do
       end
       resources :donations, only: :create
     end
+    get 'detail', on: :member
   end
   resources :flames, only: %i[index]
   resource :donation, only: :show

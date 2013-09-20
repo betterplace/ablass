@@ -4,7 +4,7 @@ class DonationsController < ApplicationController
   def create
     sin_project = current_sin.projects.find(params[:project_id])
     donation = Donation.create!(
-      { sin_project: sin_project } | params.slice(:amount_in_cents))
+      { sin_project: sin_project } | params.slice(:amount_in_cents, :sin_detail))
     redirect_to betterplace_donation_url(
       sin_project,
       params: {
