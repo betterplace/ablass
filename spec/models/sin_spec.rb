@@ -18,4 +18,10 @@ describe Sin do
     expect(sin.save).to be_true
     expect(Sin.find_by_param(sin.to_param)).to eq sin
   end
+
+  it "can be detailed" do
+    expect(sin).not_to be_detailed
+    sin.name = 'other'
+    expect(sin).to be_detailed
+  end
 end
