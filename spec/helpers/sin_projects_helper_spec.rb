@@ -6,7 +6,7 @@ describe SinProjectsHelper do
   end
 
   describe '#betterplace_platform_url' do
-    it "build an URL to the project's betterplace page" do
+    it "builds an URL to the project's betterplace page" do
       expect(betterplace_platform_url(sin_project)).to be_a URI::HTTP
     end
   end

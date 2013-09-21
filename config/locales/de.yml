@@ -4,7 +4,7 @@ de:
     button: Ablassen
   sins:
     index:
-      title: Art Deiner Sünde
+      title: Art deiner Sünde
     detail:
       title: Wie genau hast du gesündigt?
   sin_projects:
@@ -22,8 +22,8 @@ de:
       back_button: Projekt
   donations:
     show:
-      title: Du hast erfolgreich Deine Seele gewaschen!
-      facebook_link: Erzähl Deinen Freunden von Deiner Beichte
+      title: Du hast erfolgreich deine Seele gewaschen!
+      facebook_link: Erzähl' deinen Freunden von deiner Beichte
       email_link: Diese App anderen Sündern empfehlen
       email_link_subject: Ich habe von deiner letzten Sünde erfahren…
       repeat_link: Immer noch Gewissensbisse? Versuch’s noch einmal
