@@ -7,7 +7,8 @@
     %meta{:content => content_for?(:description) ? yield(:description) : "Ablass", :name => "description"}
     %meta{name: "apple-mobile-web-app-capable", content:"yes"}
 
-    %meta{name:"viewport", content:"target-densitydpi=device-dpi, width=device-width, user-scalable=no, maximum-scale=1, minimum-scale=1"}
+    - # todo: make this work
+    - # %meta{name:"viewport", content:"target-densitydpi=device-dpi, width=device-width, user-scalable=no, maximum-scale=1, minimum-scale=1"}
     %meta{name:"apple-mobile-web-app-status-bar-style", content:"black"}
 
     = render "layouts/social_media_gubbins"
