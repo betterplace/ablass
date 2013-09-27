@@ -6,7 +6,8 @@ en:
     index:
       title: What is your sin?
     detail:
-      title: How exactly have you sinned?
+      title: Describe your sin
+      button: Confess
   sin_projects:
     index:
       title: '%{sin_name}'

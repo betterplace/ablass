@@ -6,7 +6,8 @@ de:
     index:
       title: Art deiner Sünde
     detail:
-      title: Wie genau hast du gesündigt?
+      title: Bescreibe deine Sünde?
+      button: Beichten
   sin_projects:
     index:
       title: '%{sin_name}'

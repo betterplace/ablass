@@ -85,4 +85,5 @@ gem 'rails_admin_globalize_field'
 
 gem 'http_accept_language'
 
+gem 'mini_magick'
 gem 'carrierwave'
