@@ -1,0 +1,12 @@
+= content_for :header_back_button do
+  %a.btn.btn-default{ href: @betterplace_donation_url }
+    %span.glyphicon.glyphicon-chevron-right
+    = t('.redirect_button')
+
+.redirect_page
+  %h1= t('.title')
+  = link_to t('.link_text'), @betterplace_donation_url
+  = t('.link_suffix')
+
+:coffeescript
+  window.location="#{@betterplace_donation_url}"

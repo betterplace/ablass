@@ -12,8 +12,8 @@ en:
       title: '%{sin_name}'
       back_button: Sins
     show:
-      button: clear your conscience
-      remaining: still needed
+      button: Clear your conscience
+      needed: still needed
       completed: completed
       back_button: Projects
     temperature:
@@ -27,6 +27,11 @@ en:
       email_link: Recommend this app to other sinners
       email_link_subject: I've come to know about your most recent sin…
       repeat_link: Still having pangs of conscience? Try again
+    create:
+      title: Wait…
+      link_text: Click here
+      link_suffix: if you are not redirected.
+      redirect_button: Continue
   social_links:
     title: Ablass app
     description: Cleanse your sins.

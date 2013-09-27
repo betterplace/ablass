@@ -28,11 +28,14 @@ Ablass::Application.configure do
   config.assets.debug = true
 
   # Where the betterplace platform lives:
-  config.betterplace_platform_host = 'www.bp42.com'
+  config.betterplace_platform_host = 'www.betterplace.dev'
+
+  # What this application knows about where it lives:
+  config.platform_host             = 'localhost:3000'
 
   # betterplace API root
   config.betterplace_api = -> path, locale: I18n.locale {
-    "http://api.bp42.com/%s/api_v4/%s" % [ locale, path.sub(/\A\/*/, '') ]
+    "http://api.betterplace.dev/%s/api_v4/%s" % [ locale, path.sub(/\A\/*/, '') ]
   }
 
   #config.asset_host = 'http://localhost:3000'

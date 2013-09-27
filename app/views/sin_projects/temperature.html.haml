@@ -5,12 +5,13 @@
 
 .temperature_page
   %h1#heading
-    How Gravely have you sinned?
+    = t('.title')
   .donation_amount
     &euro;
     %span.value
       25
   = form_tag sin_project_donations_url(@sin_project.sin, @sin_project) do
+    = hidden_field_tag :standalone, '0'
     - params[:sin_detail].full? do |sd|
       = hidden_field_tag :sin_detail, sd
     .flames
@@ -22,7 +23,8 @@
             class: "flame_#{size}")
 
     .buttons
-      = submit_tag 'Choose', class: ["btn", "btn-danger","btn-really-large"]
+      = submit_tag t('.button'), class: ["btn", "btn-danger","btn-really-large"]
 
 .hidden.image_preloading
   %img{ src: "/images/sky-background.png"}
+
