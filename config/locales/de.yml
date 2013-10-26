@@ -4,9 +4,9 @@ de:
     button: Ablassen
   sins:
     index:
-      title: Art deiner Sünde
+      title: Art Deiner Sünde
     detail:
-      title: Beschreibe deine Sünde.
+      title: Beschreibe Deine Sünde.
       button: Beichten
   sin_projects:
     index:
@@ -24,14 +24,14 @@ de:
   donations:
     show:
       title: Glückwunsch! Du hast Dich von Deiner Sünde freigekauft.
-      facebook_link: Erzähl' deinen Freunden von Deiner Beichte.
+      facebook_link: Erzähl'Deinen Freunden von Deiner Beichte.
       email_link: Diese App anderen Sündern empfehlen.
       email_link_subject: Ich habe von Deiner letzten Sünde erfahren…
       repeat_link: Immer noch Gewissensbisse? Versuch’s noch einmal.
     create:
       title: Warte…
       link_text: Hier klicken,
-      link_suffix: wenn du nicht weitergeleitet wirst.
+      link_suffix: wenn Du nicht weitergeleitet wirst.
       redirect_button: Weiter
   social_links:
     title: Ablass App
