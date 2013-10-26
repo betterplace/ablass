@@ -8,6 +8,6 @@
 
   = form_tag sin_projects_url(@sin), method: :get do
     .inputs
-      = text_area_tag :sin_detail, params[:sin_detail], cols: 25, rows: 6
+      = text_area_tag :sin_detail, params[:sin_detail], cols: 30, rows: 6
     .buttons
       = submit_tag t('.button'), class: %w[btn btn-danger btn-really-large]

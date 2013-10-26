@@ -8,6 +8,11 @@ class SinProject < ActiveRecord::Base
   validates :description, presence: true
   translates :description
 
+  validates :long_description, presence: true
+  translates :long_description
+
+  accepts_nested_attributes_for :translations, :allow_destroy => true
+
   validates :betterplace_id,
     presence: true,
     uniqueness: true,

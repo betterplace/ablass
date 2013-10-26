@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130920130530) do
+ActiveRecord::Schema.define(version: 20131026134334) do
 
   create_table "donations", force: true do |t|
     t.integer  "sin_project_id",             null: false
@@ -44,26 +44,28 @@ ActiveRecord::Schema.define(version: 20130920130530) do
   add_index "rails_admin_histories", ["item", "table", "month", "year"], name: "index_rails_admin_histories"
 
   create_table "sin_project_translations", force: true do |t|
-    t.integer  "sin_project_id", null: false
-    t.string   "locale",         null: false
+    t.integer  "sin_project_id",   null: false
+    t.string   "locale",           null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
     t.text     "description"
+    t.text     "long_description"
   end
 
   add_index "sin_project_translations", ["locale"], name: "index_sin_project_translations_on_locale"
   add_index "sin_project_translations", ["sin_project_id"], name: "index_sin_project_translations_on_sin_project_id"
 
   create_table "sin_projects", force: true do |t|
-    t.integer  "sin_id",         null: false
-    t.string   "name",           null: false
-    t.text     "description",    null: false
-    t.integer  "betterplace_id", null: false
+    t.integer  "sin_id",           null: false
+    t.string   "name",             null: false
+    t.text     "description",      null: false
+    t.integer  "betterplace_id",   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "small_picture"
     t.string   "big_picture"
+    t.text     "long_description"
   end
 
   add_index "sin_projects", ["betterplace_id"], name: "index_sin_projects_on_betterplace_id", unique: true

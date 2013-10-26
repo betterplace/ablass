@@ -4,9 +4,14 @@
     = t('.back_button')
 
 .project-show-page
-  %img.img-responsive.project-image{ src: @sin_project.big_picture_url }/
+  %h1= @sin_project.name
+  
+  .description
+    %img.img-responsive.project-image{ src: @sin_project.small_picture_url }
+    #{@sin_project.long_description.html_safe}
+
   .intro
-    %h1= @sin_project.name
+    
     %a.btn.btn-danger.btn-lg{href: temperature_sin_project_url(@sin_project.sin, @sin_project, { anchor: "content" } | params.slice(:sin_detail)) }
       = t('.button')
       %span.glyphicon.glyphicon-chevron-right
@@ -21,8 +26,7 @@
         .value
           .banner= t('.needed')
           = number_to_currency @sin_project.betterplace_open_amount_in_cents / 100, unit: '€', precision: 0, format: '%n%u'
-  .description
-    #{@sin_project.betterplace_description.html_safe}
+  
 
 .hidden.image_preloading
   %img{ src: "/images/sprites/flame-off.png" }
