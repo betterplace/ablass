@@ -2,7 +2,8 @@
 %ul.list-unstyled.link-list
   - for sin in @sins
     %li{style: "background-image: url(#{sin.icon_url})"}
-      %a{ href: sin.detailed? ? detail_sin_url(sin, params.slice(:sin_detail)) : sin_projects_url(sin) }
-        .text
-          %h2= sin.display_name
-          %p= sin.explanation
+      - if sin.projects.present?
+        %a{ href: sin.detailed? ? detail_sin_url(sin, params.slice(:sin_detail)) : sin_project_url(sin, sin.projects.first) }
+          .text
+            %h2= sin.display_name
+            %p= sin.explanation

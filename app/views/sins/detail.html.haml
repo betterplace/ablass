@@ -6,7 +6,7 @@
 .detail_page
   %h1= t('.title')
 
-  = form_tag sin_projects_url(@sin), method: :get do
+  = form_tag sin_project_url(@sin, @sin.projects.first), method: :get do
     .inputs
       = text_area_tag :sin_detail, params[:sin_detail], cols: 30, rows: 6
     .buttons
