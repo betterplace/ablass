@@ -1,0 +1,11 @@
+= content_for :header_back_button do
+  %a.btn.btn-default{href: sins_url}
+    %span.glyphicon.glyphicon-chevron-left
+    = t('sin_projects.index.back_button')
+
+.contact-page
+  %h1= t('.about_ablass')
+  = t('.intro').html_safe
+  
+  %h1= t('.about_lab')
+  = t('.big_blob').html_safe
