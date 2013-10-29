@@ -7,7 +7,8 @@
   %h1= @sin_project.name
   .description
     %img.img-responsive.project-image{ src: @sin_project.betterplace_profile_picture_url }
-    #{@sin_project.long_description.html_safe}
+    -if @sin_project.long_description
+      #{@sin_project.long_description.html_safe}
 
   .intro
     
