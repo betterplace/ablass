@@ -1,13 +1,12 @@
 = content_for :header_back_button do
-  %a.btn.btn-default{href: sin_projects_url(@sin_project.sin)}
+  %a.btn.btn-default{href: sins_url}
     %span.glyphicon.glyphicon-chevron-left
-    = t('.back_button')
+    = t('sin_projects.index.back_button')
 
 .project-show-page
   %h1= @sin_project.name
-  
   .description
-    %img.img-responsive.project-image{ src: @sin_project.small_picture_url }
+    %img.img-responsive.project-image{ src: @sin_project.betterplace_profile_picture_url }
     #{@sin_project.long_description.html_safe}
 
   .intro

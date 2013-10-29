@@ -22,10 +22,7 @@ class SinProject < ActiveRecord::Base
     to: :betterplace_project, prefix: :betterplace
 
   mount_uploader :small_picture, SinProjectSmallPictureUploader
-  validates :small_picture, presence: true
-
   mount_uploader :big_picture, SinProjectBigPictureUploader
-  validates :big_picture, presence: true
 
   def image
     big_picture_url
@@ -41,6 +38,10 @@ class SinProject < ActiveRecord::Base
 
   def donated
     betterplace_progress_percentage
+  end
+
+  def betterplace_profile_picture_url
+    betterplace_project.profile_picture.links.first.href
   end
 
   private
