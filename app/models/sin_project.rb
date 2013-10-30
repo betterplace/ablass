@@ -3,13 +3,13 @@ class SinProject < ActiveRecord::Base
   validates :sin, presence: true
 
   validates :name, presence: true
-  translates :name
+  translates :name, :fallbacks_for_empty_translations => true
 
   validates :description, presence: true
-  translates :description
+  translates :description, :fallbacks_for_empty_translations => true
 
   validates :long_description, presence: true
-  translates :long_description
+  translates :long_description, :fallbacks_for_empty_translations => true
 
   accepts_nested_attributes_for :translations, :allow_destroy => true
 
