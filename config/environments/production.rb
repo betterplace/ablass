@@ -80,7 +80,7 @@ Ablass::Application.configure do
 
   # Where the betterplace platform lives:
   #config.betterplace_platform_host = 'www.betterplace.org' TODO use this later on
-  config.betterplace_platform_host = 'bp42.com'
+  config.betterplace_platform_host = 'betterplace.org'
 
   # What this application knows about where it lives:
   config.platform_host             = 'www.ablass-app.de'
