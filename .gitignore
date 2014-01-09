@@ -7,3 +7,4 @@ tmp
 .ruby-gemset
 tags
 public/uploads
+dump.rdb
