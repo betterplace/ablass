@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Ablass::Application.config.secret_key_base = '9eaeac39d9bd270770296166e58d9752cc864033bbc68510b75422f66923d9d155e47c179edece6b9ad6adab52b3e495c64967e84a088c5466118776c3577bdf'
+Ablass::Application.config.secret_key_base = ENV['SECRET_KEY']

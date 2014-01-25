@@ -26,4 +26,4 @@ production:
   database: da9dv9t1hpp2g5
   user: jyggaxvirpyuym
   port: 5442
-  password: DPBK_U43NYJWOxHTVMXB8sLUJK
+  password: ENV['DB_PASSWORD']
