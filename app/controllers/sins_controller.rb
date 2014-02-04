@@ -2,7 +2,7 @@ class SinsController < ApplicationController
   respond_to :html, :json
 
   def index
-    @sins = Sin.order('id DESC').all
+    @sins = Sin.order('id DESC').to_a
     respond_with(@sins)
   end
 

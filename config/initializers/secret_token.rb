@@ -9,4 +9,8 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Ablass::Application.config.secret_key_base = ENV['SECRET_KEY']
+if Rails.env.development? || Rails.env.test?
+  Ablass::Application.config.secret_key_base =  'A' * 128
+else
+  Ablass::Application.config.secret_key_base = ENV['SECRET_KEY']
+end
