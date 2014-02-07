@@ -33,7 +33,7 @@ describe SinProject do
 
   describe 'betterplace API access' do
     let :api_request_url do
-      "http://api.bp42.com/en/api_v4/projects/#{sin_project.betterplace_id}.json"
+      "https://api.bp42.com/en/api_v4/projects/#{sin_project.betterplace_id}.json"
     end
 
     context 'incorrect API response' do

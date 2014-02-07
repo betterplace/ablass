@@ -42,7 +42,7 @@ Ablass::Application.configure do
 
   # betterplace API root
   config.betterplace_api = -> path, locale: I18n.locale {
-    "http://api.bp42.com/%s/api_v4/%s" % [ locale, path.sub(/\A\/*/, '') ]
+    "https://api.bp42.com/%s/api_v4/%s" % [ locale, path.sub(/\A\/*/, '') ]
   }
 
   #config.asset_host = 'http://localhost:3000'
