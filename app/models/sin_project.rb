@@ -41,7 +41,7 @@ class SinProject < ActiveRecord::Base
   end
 
   def betterplace_profile_picture_url
-    betterplace_project.profile_picture.links.find{|l| l.rel == "profile_attention_deprecated"}.href
+    betterplace_project.profile_picture.links.find { |l| l.rel == "original" }.href
   end
 
   private
