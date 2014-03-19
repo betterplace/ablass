@@ -75,6 +75,8 @@ gem 'rails_admin'
 
 gem "devise"
 
+gem 'newrelic_rpm'
+
 gem 'heroku'
 
 gem 'tins', '~>0.10', require: 'tins/xt'
