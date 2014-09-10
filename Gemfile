@@ -45,6 +45,10 @@ group :assets do
   gem 'sassy-buttons'
 end
 
+group :production do
+  gem 'thin'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
