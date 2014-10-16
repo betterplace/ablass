@@ -29,7 +29,7 @@ class DonationsController < ApplicationController
   private
 
   def betterplace_donation_url(sin_project, lang: I18n.locale, params: {})
-    url = "https://#{Rails.configuration.betterplace_platform_host}"\
+    url = "#{Rails.configuration.betterplace_platform_url}"\
       "/#{lang}/projects/#{sin_project.betterplace_id}/client_donations/new"
     params.present? and url << "?#{params.to_param}"
     url

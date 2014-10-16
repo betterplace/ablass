@@ -35,7 +35,7 @@ Ablass::Application.configure do
   config.active_support.deprecation = :stderr
 
   # Where the betterplace platform lives:
-  config.betterplace_platform_host = 'betterplace.test.host'
+  config.betterplace_platform_url = 'http://betterplace.test.host'
 
   # What this application knows about where it lives:
   config.platform_host             = 'test.host:3000'

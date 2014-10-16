@@ -28,7 +28,7 @@ Ablass::Application.configure do
   config.assets.debug = true
 
   # Where the betterplace platform lives:
-  config.betterplace_platform_host = 'www.betterplace.dev'
+  config.betterplace_platform_url = 'http://www.betterplace.dev'
 
   # What this application knows about where it lives:
   config.platform_host             = 'localhost:3000'

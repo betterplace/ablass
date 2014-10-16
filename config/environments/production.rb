@@ -79,8 +79,7 @@ Ablass::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # Where the betterplace platform lives:
-  #config.betterplace_platform_host = 'www.betterplace.org' TODO use this later on
-  config.betterplace_platform_host = 'betterplace.org'
+  config.betterplace_platform_url = 'https://betterplace.org'
 
   # What this application knows about where it lives:
   config.platform_host             = 'www.ablass-app.de'
