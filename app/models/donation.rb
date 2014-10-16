@@ -13,6 +13,22 @@ class Donation < ActiveRecord::Base
     where(token: token).first
   end
 
+  def sync_amount_in_background
+    Thread.new { sync_amount }
+  end
+
+  def sync_amount
+    client_donation = BetterplaceApi.new.get(
+      "/clients/ablass/client_donations",
+      params: { facets: "client_reference:#{token}" }
+    ).data.first
+    self.amount_in_cents = client_donation.amount_in_cents
+    save!
+  rescue => e
+    logger.error e
+    return false
+  end
+
   private
 
   def generate_token

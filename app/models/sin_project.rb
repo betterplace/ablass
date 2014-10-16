@@ -47,15 +47,8 @@ class SinProject < ActiveRecord::Base
   private
 
   def betterplace_project
-    require 'open-uri'
     @betterplace_project ||= betterplace_id.full? do |id|
-      api_url = Rails.configuration.betterplace_api.("/projects/%u.json" % id)
-      begin
-        JSON.parse(open(api_url).read, object_class: JSON::GenericObject)
-      rescue => e
-        e.message << " (#{api_url})"
-        raise e
-      end
+      BetterplaceApi.new.get("/projects/%u.json" % id)
     end
   end
 end

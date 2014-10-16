@@ -20,6 +20,7 @@ class DonationsController < ApplicationController
   def show
     @no_header = true
     if @donation = Donation.find_by_token(params[:donation_client_reference])
+      @donation.sync_amount_in_background
     else
       render text: 'ouch, no such donation', status: :not_found # TODO make this a bit nicer
     end
