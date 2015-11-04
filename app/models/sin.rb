@@ -1,4 +1,6 @@
 class Sin < ActiveRecord::Base
+  has_many :sin_projects
+
   validates :name, presence: true, uniqueness: true
 
   validates :display_name, presence: true

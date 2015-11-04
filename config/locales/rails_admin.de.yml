@@ -2,6 +2,11 @@
 
 de:
   admin:
+    help:
+      sin/translation:
+        locale: Übersetzungen für Sünden
+      sin_project/translation:
+        locale: Übersetzungen für Sündenprojekte
     home:
       name: "Home"
     pagination:
