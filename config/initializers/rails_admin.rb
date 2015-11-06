@@ -3,7 +3,7 @@
 
 RailsAdmin.config do |config|
   config.authenticate_with do |controller|
-    controller.authenticate! scope: :user
+    controller.authenticate_user!
   end
   config.current_user_method(&:current_user)
 
