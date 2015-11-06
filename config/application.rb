@@ -23,7 +23,6 @@ module Ablass
     config.i18n.default_locale = :en
     config.i18n.available_locales = [ :en, :de ]
 
-
     # Configure generators
     config.generators do |g|
       g.test_framework :rspec

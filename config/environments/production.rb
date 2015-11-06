@@ -83,6 +83,7 @@ Ablass::Application.configure do
 
   # What this application knows about where it lives:
   config.platform_host             = 'www.ablass-app.de'
+  config.action_mailer.default_url_options = { host: config.platform_host }
 
   # betterplace API root
   config.betterplace_api = -> path, locale: I18n.locale {

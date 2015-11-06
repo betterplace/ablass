@@ -27,7 +27,11 @@
     #content.container.content
       = yield
 
-    %footer
-      =link_to t('footer.contact_us'), contact_url
+  %div.flash
+    %p.notice= notice
+    %p.alert= alert
+
+  %footer
+    =link_to t('footer.contact_us'), contact_url
 
     = render "layouts/google_analytics"

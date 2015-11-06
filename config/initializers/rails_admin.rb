@@ -2,7 +2,10 @@
 # See github.com/sferik/rails_admin for more informations
 
 RailsAdmin.config do |config|
-
+  config.authenticate_with do |controller|
+    controller.authenticate! scope: :user
+  end
+  config.current_user_method(&:current_user)
 
   ################  Global configuration  ################
 
@@ -71,14 +74,14 @@ RailsAdmin.config do |config|
 
   #   # Found associations:
 
-  #     configure :projects, :has_many_association 
+  #     configure :projects, :has_many_association
 
   #   # Found columns:
 
-  #     configure :id, :integer 
-  #     configure :name, :string 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime 
+  #     configure :id, :integer
+  #     configure :name, :string
+  #     configure :created_at, :datetime
+  #     configure :updated_at, :datetime
 
   #   # Cross-section configuration:
 
@@ -114,17 +117,17 @@ RailsAdmin.config do |config|
 
   #   # Found associations:
 
-  #     configure :sin, :belongs_to_association 
+  #     configure :sin, :belongs_to_association
 
   #   # Found columns:
 
-  #     configure :id, :integer 
-  #     configure :sin_id, :integer         # Hidden 
-  #     configure :name, :string 
-  #     configure :description, :text 
-  #     configure :betterplace_id, :integer 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime 
+  #     configure :id, :integer
+  #     configure :sin_id, :integer         # Hidden
+  #     configure :name, :string
+  #     configure :description, :text
+  #     configure :betterplace_id, :integer
+  #     configure :created_at, :datetime
+  #     configure :updated_at, :datetime
 
   #   # Cross-section configuration:
 

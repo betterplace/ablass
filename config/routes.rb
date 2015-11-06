@@ -20,6 +20,6 @@ Ablass::Application.routes.draw do
   resource :donation, only: :show
 
   # Admin backend
-  devise_for :users
+  devise_for :user, path: '/admin'
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 end
