@@ -1,12 +1,12 @@
 require 'spec_helper'
 
-describe SinProjectsController do
+describe SinProjectsController, type: :controller do
   describe "GET 'index'" do
     let :sin do FactoryGirl.create(:sin) end
 
     it "returns http success" do
       get 'index', sin_id: sin
-      response.should be_success
+      expect(response).to be_success
     end
   end
 
@@ -17,7 +17,7 @@ describe SinProjectsController do
 
     it "returns http success" do
       get 'show', sin_id: sin_project.sin, id: sin_project
-      response.should be_success
+      expect(response).to be_success
     end
   end
 end

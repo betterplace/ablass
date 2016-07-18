@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SinProjectsHelper do
+describe SinProjectsHelper, type: :helper do
   let :sin_project do
     FactoryGirl.build(:sin_project)
   end

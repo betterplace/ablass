@@ -15,7 +15,7 @@ describe Sin do
   end
 
   it "can be found via its parameter" do
-    expect(sin.save).to be_true
+    expect(sin.save).to eq true
     expect(Sin.find_by_param(sin.to_param)).to eq sin
   end
 

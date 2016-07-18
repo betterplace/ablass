@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-ruby '2.1.8'
+ruby '2.3.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~>4.0.8'
@@ -63,17 +63,14 @@ gem 'byebug', group: [:development, :test]
 
 gem 'haml-rails'
 
+gem 'rspec-collection_matchers', '~> 1.1'
 gem 'rspec-rails', group: :test
 
 gem 'capybara', group: :test
 
 gem 'simplecov', group: :test
 
-gem 'webmock', group: :test
-
 gem 'factory_girl', group: :test
-
-gem 'fuubar', group: :test
 
 gem 'rails_admin'
 
@@ -83,7 +80,7 @@ gem 'newrelic_rpm'
 
 gem 'tins', '~>1.0', require: 'tins/xt'
 
-gem 'globalize', github: 'globalize/globalize'
+gem 'globalize', '~>4.0'
 gem 'rails_admin_globalize_field'
 
 gem 'http_accept_language'

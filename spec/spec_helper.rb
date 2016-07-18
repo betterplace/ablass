@@ -36,7 +36,6 @@ RSpec.configure do |config|
   end
 
   config.before(:each) do
-    WebMock.disable_net_connect!
     I18n.locale = 'en'
   end
 end
