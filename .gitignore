@@ -1,7 +1,6 @@
 .DS_Store
 .bundle
 .ruby-gemset
-.ruby-version
 coverage
 db/*.sqlite3*
 dump.rdb
