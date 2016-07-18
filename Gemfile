@@ -81,12 +81,13 @@ gem "devise"
 
 gem 'newrelic_rpm'
 
-gem 'tins', '~>0.10', require: 'tins/xt'
+gem 'tins', '~>1.0', require: 'tins/xt'
 
 gem 'globalize', github: 'globalize/globalize'
 gem 'rails_admin_globalize_field'
 
 gem 'http_accept_language'
+gem 'rack-timeout'
 
-gem 'mini_magick'
 gem 'carrierwave'
+gem 'mini_magick'
