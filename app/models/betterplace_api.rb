@@ -7,7 +7,9 @@ class BetterplaceApi
     api_url = Rails.configuration.betterplace_api.(query, locale: I18n.locale)
     Rails.logger.info "Requesting #{api_url.to_s.inspect}."
     begin
-      JSON.parse(open(api_url).read, object_class: JSON::GenericObject)
+      open(api_url, open_timeout: 10.seconds, read_timeout: 10.seconds) { |api|
+        JSON.parse(api.read, object_class: JSON::GenericObject)
+      }
     rescue => e
       e.message << " (#{api_url})"
       Rails.logger.error e
