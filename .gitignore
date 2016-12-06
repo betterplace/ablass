@@ -8,3 +8,5 @@ log
 public/uploads
 tags
 tmp
+.byebug_history
+errors.lst
